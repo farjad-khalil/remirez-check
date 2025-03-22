@@ -19,8 +19,8 @@ export default function ChooseUs() {
           <div className="p-6 pb-0">
             <div className="text-2xl font-bold mb-2">
               <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, ease: 'easeOut' }}
                 viewport={{ once: true }}
               >
@@ -77,8 +77,8 @@ export default function ChooseUs() {
           <div className="w-1/2 p-12">
             <div className="text-2xl font-bold mb-2">
               <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, ease: 'easeOut' }}
                 viewport={{ once: true }}
               >

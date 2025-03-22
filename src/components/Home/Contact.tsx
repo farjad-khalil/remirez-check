@@ -1,5 +1,6 @@
 'use client'
 
+import { motion } from 'framer-motion'
 import type React from 'react'
 import { useState } from 'react'
 import Image from 'next/image'
@@ -95,42 +96,86 @@ export default function ContactForm() {
 
           {/* Form - desktop on right, mobile on top */}
           <div className="p-8 md:p-10 relative order-1 md:order-2">
-            <h2 className="text-3xl font-bold text-neonGreen mb-4">{contact_data.h1}</h2>
-            <p className="text-gray-600 mb-6">{contact_data.desc}</p>
+            <div className="text-3xl font-bold text-neonGreen mb-4">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, ease: 'easeOut' }}
+                viewport={{ once: true }}
+              >
+                {contact_data.h1}
+              </motion.div>
+            </div>
+            <div className="text-gray-600 mb-6">
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: 'easeOut' }}
+                viewport={{ once: true }}
+              >
+                {contact_data.desc}
+              </motion.div>
+            </div>
 
             <form onSubmit={handleSubmit} className="space-y-4">
-              <Input
-                type="text"
-                name="fullName"
-                placeholder="Full Name"
-                value={formData.fullName}
-                onChange={handleChange}
-              />
-
-              <Input
-                type="email"
-                name="email"
-                placeholder="Email Address"
-                value={formData.email}
-                onChange={handleChange}
-              />
-
-              <Input
-                type="tel"
-                name="phone"
-                placeholder="Phone Number"
-                value={formData.phone}
-                onChange={handleChange}
-              />
-              <div>
-                <textarea
-                  name="message"
-                  placeholder="Enter Message"
-                  value={formData.message}
+              <motion.div
+                initial={{ opacity: 0, x: 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, ease: 'easeOut' }}
+                viewport={{ once: true }}
+              >
+                <Input
+                  type="text"
+                  name="fullName"
+                  placeholder="Full Name"
+                  value={formData.fullName}
                   onChange={handleChange}
-                  rows={4}
-                  className="w-full p-4 border-2 border-neonGreen rounded-sm focus:outline-none focus:ring-1 focus:ring-neonGreen resize-none placeholder:text-black"
                 />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, ease: 'easeOut' }}
+                viewport={{ once: true }}
+              >
+                <Input
+                  type="email"
+                  name="email"
+                  placeholder="Email Address"
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, ease: 'easeOut' }}
+                viewport={{ once: true }}
+              >
+                <Input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number"
+                  value={formData.phone}
+                  onChange={handleChange}
+                />
+              </motion.div>
+              <div>
+                <motion.div
+                  initial={{ opacity: 0, x: -40 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, ease: 'easeOut' }}
+                  viewport={{ once: true }}
+                >
+                  <textarea
+                    name="message"
+                    placeholder="Enter Message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows={4}
+                    className="w-full p-4 border-2 border-neonGreen rounded-sm focus:outline-none focus:ring-1 focus:ring-neonGreen resize-none placeholder:text-black"
+                  />
+                </motion.div>
               </div>
 
               <div className="flex justify-end">
