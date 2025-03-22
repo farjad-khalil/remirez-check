@@ -10,8 +10,8 @@ type SectionProps = {
   desc_1: string
   desc_2: string
   desc_3: string
-  img: string // image path for the main section image
-  icon: string // icon path or identifier
+  img: string
+  icon: string
 }
 
 export default function Section({
