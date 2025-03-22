@@ -1,3 +1,6 @@
+'use client'
+
+import { motion } from 'framer-motion'
 import React from 'react'
 import Image from 'next/image'
 import { our_story_text } from '@/constants/constants'
@@ -8,15 +11,38 @@ export default function OurStory() {
         <div className=" ">
           <div className="grid md:grid-cols-2 ">
             <div className="bg-neonGreen p-8 text-white py-20 px-10 max-sm:py-9 max-sm:px-5  md:px-16 ">
-              <h2 className="md:text-8xl text-2xl font-bold mb-6">Our Story</h2>
+              <div className="md:text-8xl text-2xl font-bold mb-6">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6, ease: 'easeOut' }}
+                  viewport={{ once: true }}
+                >
+                  Our Story
+                </motion.div>
+              </div>
 
               <div className="mb-4">
                 <div className="">
                   <span className="md:text-4xl text-lg font-bold text-white mb-4">
-                    {our_story_text.heading}
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.6, ease: 'easeOut' }}
+                      viewport={{ once: true }}
+                    >
+                      {our_story_text.heading}
+                    </motion.div>
                   </span>
                   <span className="md:text-4xl text-lg montserrat-light  text-white ">
-                    {our_story_text.description}
+                    <motion.div
+                      initial={{ opacity: 0, y: 40 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, ease: 'easeOut' }}
+                      viewport={{ once: true }}
+                    >
+                      {our_story_text.description}
+                    </motion.div>
                   </span>
                 </div>
               </div>

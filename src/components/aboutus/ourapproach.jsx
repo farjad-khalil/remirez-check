@@ -1,3 +1,5 @@
+"use client"
+import {motion} from 'framer-motion'
 import React from 'react'
 import Image from 'next/image'
 import { DividerCenter } from '../Divider/divider'
@@ -19,7 +21,7 @@ export default function OurApproach() {
                 priority
               />
 
-              <div className="space-y-4 max-md:pt-10 flex flex-col">
+              <div className="space-y-4 max-md:pt-10 flex flex-col justify-between">
                 {[
                   { icon: '/assets/aboutus/Frame.svg', text: 'Customer-Centric Service' },
                   { icon: '/assets/aboutus/Frame-1.svg', text: 'Commitment to Excellence' },
@@ -47,10 +49,17 @@ export default function OurApproach() {
 
             <div className="bg-neonGreen p-8 text-white md:col-span-5 flex items-center">
               <h3 className="mb-4 text-2xl montserrat-light ">
-                The <span className="font-bold">testimonies</span> of our customers are our largest
-                asset. From the beginning we&apos;ve been so very grateful to all our loyal
-                customers. Here we promise to continue our legacy by bringing you superb,
-                outstanding service and care for your home garden and lawn.
+                <motion.div
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, ease: 'easeOut' }}
+                  viewport={{ once: true }}
+                >
+                  The <span className="font-bold">testimonies</span> of our customers are our
+                  largest asset. From the beginning we&apos;ve been so very grateful to all our
+                  loyal customers. Here we promise to continue our legacy by bringing you superb,
+                  outstanding service and care for your home garden and lawn.
+                </motion.div>
               </h3>
             </div>
           </div>
