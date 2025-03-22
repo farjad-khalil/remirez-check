@@ -1,3 +1,6 @@
+'use client'
+
+import { motion } from 'framer-motion'
 import { home_info } from '@/constants/constants'
 import Image from 'next/image'
 import React from 'react'
@@ -23,16 +26,34 @@ export default function Info() {
               <div className="mb-4">
                 <div className="">
                   <span className="md:text-4xl text-2xl font-bold text-white mb-4">
-                    {home_info.heading}
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.6, ease: 'easeOut' }}
+                      viewport={{ once: true }}
+                    >
+                      {home_info.heading}
+                    </motion.div>
+
                     <br />
                   </span>
+                  
                   <span className="md:text-lg  text-sm montserrat-light  text-white ">
-                    {home_info.description}
+                    <motion.div
+                      initial={{ opacity: 0, y: 40 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, ease: 'easeOut' }}
+                      viewport={{ once: true }}
+                    >
+                      {home_info.description}
+                    </motion.div>
+                    
                   </span>
                   <div className="mt-10 max-md:flex max-md:justify-center">
                     <ButtonGreen text="Read More" hover={false} />
                   </div>
                 </div>
+                
               </div>
             </div>
           </div>

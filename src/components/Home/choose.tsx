@@ -1,5 +1,6 @@
 'use client'
 
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import {
   Accordion,
@@ -16,12 +17,26 @@ export default function ChooseUs() {
         {/* Mobile Layout (stacked) */}
         <div className="block md:hidden">
           <div className="p-6 pb-0">
-            <h2 className="text-2xl font-bold mb-2">At Ramirez Landscaping</h2>
-            <p className="mb-6">
-              we take pride in delivering top-quality landscaping services tailored to your needs.
-              Our expert team ensures your outdoor space remains lush, vibrant, and well-maintained
-              throughout the year.
-            </p>
+            <div className="text-2xl font-bold mb-2">
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: 'easeOut' }}
+                viewport={{ once: true }}
+              >
+                {choose_data.h1}
+              </motion.div>
+            </div>
+            <div className="mb-6">
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: 'easeOut' }}
+                viewport={{ once: true }}
+              >
+                {choose_data.desc}
+              </motion.div>
+            </div>
           </div>
 
           <div className="px-6">
@@ -60,8 +75,26 @@ export default function ChooseUs() {
 
         <div className="hidden md:flex">
           <div className="w-1/2 p-12">
-            <h2 className="text-3xl font-bold mb-3">{choose_data.h1}</h2>
-            <p className="mb-8 text-lg">{choose_data.desc}</p>
+            <div className="text-2xl font-bold mb-2">
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: 'easeOut' }}
+                viewport={{ once: true }}
+              >
+                {choose_data.h1}
+              </motion.div>
+            </div>
+            <div className="mb-6">
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: 'easeOut' }}
+                viewport={{ once: true }}
+              >
+                {choose_data.desc}
+              </motion.div>
+            </div>
 
             <Accordion type="single" collapsible defaultValue="item-0">
               {accordion_data.map((item, index) => (

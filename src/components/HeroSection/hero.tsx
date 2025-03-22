@@ -1,6 +1,7 @@
 'use client'
 import Image from 'next/image'
 import { ButtonGreenBright, ButtonWhite } from '../Button/button'
+import { motion } from 'framer-motion'
 type HeroProps = {
   t1: string
   t2: string
@@ -48,30 +49,49 @@ export default function Hero({
       <div className="absolute md:px-44  inset-0 flex items-center justify-center text-white font-bold bg-black bg-opacity-10 text-center">
         <div>
           <h1 className="text-4xl max-sm:text-2xl md:text-7xl font-bold mb-6 px-10">
-            {t1} <span className="text-BrightGreen">{t2}</span>
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              {t1} <span className="text-BrightGreen">{t2}</span>
+            </motion.div>
           </h1>
-          <h1>{description}</h1>
-          {buttons ? (
-            <div className="py-20 flex gap-10 justify-center max-md:flex-col items-center">
-              {btn_1 && btn_1 === 'Get a Free Quote' ? (
-                <button
-                  onClick={() => scrollToSection('contact-section')}
-                  className="bg-white w-60  py-4 font-bold text-black shadow-lg shadow-black "
-                >
-                  {btn_1}
-                </button>
-              ) : (
-                <ButtonWhite
-                  text={btn_1}
-                  to={to_1}
-                  onClick={() => scrollToSection('contact-section')}
-                />
-              )}
-              <ButtonGreenBright text={btn_2} to={to_2} />
-            </div>
-          ) : (
-            <div className="hidden"></div>
-          )}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <h1>{description}</h1>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            viewport={{ once: true }}
+          >
+            {buttons ? (
+              <div className="py-20 flex gap-10 justify-center max-md:flex-col items-center">
+                {btn_1 && btn_1 === 'Get a Free Quote' ? (
+                  <button
+                    onClick={() => scrollToSection('contact-section')}
+                    className="bg-white w-60  py-4 font-bold text-black shadow-lg shadow-black "
+                  >
+                    {btn_1}
+                  </button>
+                ) : (
+                  <ButtonWhite
+                    text={btn_1}
+                    to={to_1}
+                    onClick={() => scrollToSection('contact-section')}
+                  />
+                )}
+                <ButtonGreenBright text={btn_2} to={to_2} />
+              </div>
+            ) : (
+              <div className="hidden"></div>
+            )}
+          </motion.div>
         </div>
       </div>
     </div>

@@ -1,3 +1,5 @@
+import { animate } from "framer-motion"
+
 // Hero section data
 type HeroData = {
   t1: string
@@ -9,7 +11,7 @@ export const hero_data_aboutus: HeroData = {
   t1: 'About',
   t2: 'Us',
   description: (
-    <p className="md:text-2xl max-sm:text-base md:mx-44 text-lg mx-8">
+    <p className="md:text-2xl max-sm:text-base md:mx-4 text-lg mx-8">
       What sets us apart? Our commitment to{' '}
       <span className="text-BrightGreen">excellence, attention to detail,</span> and{' '}
       <span className="text-BrightGreen">customer satisfaction.</span> We treat every{' '}
@@ -26,7 +28,7 @@ export const hero_data_services: HeroData = {
   t1: 'Our',
   t2: 'Services',
   description: (
-    <p className="md:text-2xl max-sm:text-base md:mx-44 text-lg mx-8">
+    <p className="md:text-2xl max-sm:text-base md:mx-4 text-lg mx-8">
       Our services are designed to enhance and maintain the beauty of your outdoor space with expert
       care. From <span className="text-BrightGreen">landscape design and tree trimming,</span> to sod
       installation and seasonal cleanup, we ensure your lawn and garden stay vibrant
@@ -41,7 +43,7 @@ export const hero_data_gallery: HeroData = {
   t1: 'Our',
   t2: 'Gallery',
   description: (
-    <p className="md:text-2xl max-sm:text-base md:mx-44 text-lg mx-8">
+    <p className="md:text-2xl max-sm:text-base md:mx-4 text-lg mx-8">
       Browse through our <span className="text-BrightGreen">gallery, </span> to see stunning examples
       of our
       <span className="text-BrightGreen"> landscape transformations.</span> From vibrant gardens to
@@ -58,7 +60,7 @@ export const hero_data_contactus: HeroData = {
   t1: 'Contact',
   t2: 'Us',
   description: (
-    <p className="md:text-2xl max-sm:text-base md:mx-44 text-lg mx-8">
+    <p className="md:text-2xl max-sm:text-base md:mx-4 text-lg mx-8">
       We’re here to help! Whether you need{' '}
       <span className="text-BrightGreen">expert landscaping services, </span> have
       <span className="text-BrightGreen">questions about our offerings,</span> or want a{' '}
@@ -73,7 +75,7 @@ export const hero_data_home: HeroData = {
   t1: 'Serving Garden City & Nassau County for Over ',
   t2: '20 Years!',
   description: (
-    <p className="md:text-2xl max-sm:text-lg md:mx-44 text-lg mx-8">
+    <p className="md:text-2xl max-sm:text-lg md:mx-4 text-lg mx-8">
       With <span className="text-BrightGreen">years of expertise, </span>, we provide high-quality
       <span className="text-BrightGreen"> landscaping and gardening, </span> services tailored to your
       needs, ensuring a lush, vibrant environment all year round.
@@ -85,7 +87,7 @@ export const hero_data_error: HeroData = {
   t1: 'Oops! ',
   t2: 'Page Not Found',
   description: (
-    <p className="md:text-2xl max-sm:text-base md:mx-44 text-lg mx-8">
+    <p className="md:text-2xl max-sm:text-base md:mx-4 text-lg mx-8">
       It looks like the page you were looking for doesn’t exist or may have been moved.{' '}
       <span className="text-BrightGreen">Don’t worry, </span> we’re here to help you find what you
       need!
@@ -209,6 +211,7 @@ export const choose_data = {
   h1: 'At Ramirez Landscaping',
   desc: 'we take pride in delivering top-quality landscaping services tailored to your needs. Our expert team ensures your outdoor space remains lush, vibrant, and well-maintained throughout the year.',
 }
+
 
 // About US Page
 export const our_story_text = {
@@ -367,4 +370,49 @@ export const footer_contact = {
   mail: 'mramirezlandscaper@gmail.com',
   url: 'ramirez.net',
   location: 'D block, H Road Nassur',
+}
+
+
+
+
+
+// Animations
+export const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+}
+
+export const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: 'easeOut' },
+
+  },
+}
+
+// constants/motionVariants.ts
+
+export const hoverScale = {
+  initial: { scale: 1 },
+  whileHover: { scale: 1.05 },
+  transition: {
+    type: 'spring',
+    stiffness: 300,
+  },
+}
+
+// constants/motionVariants.ts
+export const buttonVariants = {
+  initial: { scale: 1 },
+  whileHover: { scale: 1.05 },
+  transition: {
+    type: 'spring',
+    stiffness: 300,
+  },
 }

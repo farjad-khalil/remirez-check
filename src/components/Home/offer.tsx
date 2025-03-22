@@ -1,5 +1,9 @@
+'use client'
+
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { offer_data, services_heading } from '@/constants/constants'
+import { containerVariants, itemVariants } from '@/constants/constants'
 export default function Offer() {
   return (
     <section className=" mx-14 pb-10 max-sm:mx-5">
@@ -8,9 +12,23 @@ export default function Offer() {
         <div className="space-y-8">
           <div>
             <h2 className="md:text-4xl text-2xl max-sm:text-base  font-bold text-neutral-600 mb-8 leading-tight">
-              {services_heading.h1}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, ease: 'easeOut' }}
+                viewport={{ once: true }}
+              >
+                {services_heading.h1}
+              </motion.div>
             </h2>
-            <p className="text-2xl max-sm:text-base  text-neonGreen">{services_heading.desc}</p>
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: 'easeOut' }}
+              viewport={{ once: true }}
+            >
+              <p className="text-2xl max-sm:text-base  text-neonGreen">{services_heading.desc}</p>
+            </motion.div>
           </div>
 
           <div className="flex justify-center md:justify-start">
@@ -26,9 +44,19 @@ export default function Offer() {
         </div>
 
         {/* Right Column - Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-12">
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 gap-12"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           {offer_data.map((service, index) => (
-            <div key={index} className="bg-neutral-100 overflow-hidden rounded-sm pb-2 ">
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              className="bg-neutral-100 overflow-hidden rounded-sm pb-2"
+            >
               <div className="h-56 overflow-hidden">
                 <Image
                   src={service.image || '/placeholder.svg'}
@@ -39,16 +67,16 @@ export default function Offer() {
                   priority
                 />
               </div>
-              <div className="p-4 max-sm:py-2 ">
-                <h3 className="text-xl max-md:text-2xl  font-bold text-neonGreen mb-2 max-sm:mb-0">
+              <div className="p-4 max-sm:py-2">
+                <h3 className="text-xl max-md:text-2xl font-bold text-neonGreen mb-2 max-sm:mb-0">
                   {service.title}
                 </h3>
                 <br />
                 <p className="text-gray-700 max-md:text-lg font-medium">{service.description}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   )

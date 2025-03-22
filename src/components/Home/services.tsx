@@ -1,9 +1,11 @@
 'use client'
-
+import { motion } from 'framer-motion'
 import { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 import { services_data } from '@/constants/constants'
 import { ButtonGreen } from '../Button/button'
+import { containerVariants, itemVariants } from '@/constants/constants'
+
 
 export default function ServiceCards() {
   const [mobileActiveIndex, setMobileActiveIndex] = useState(2) // Start at 3rd card (index 2)
@@ -35,11 +37,18 @@ export default function ServiceCards() {
     <section className="py-16 px-4 bg-lightGreen">
       <div className="max-w-7xl mx-auto">
         {/* Desktop Grid View */}
-        <div className="hidden md:grid grid-cols-3 gap-14">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="hidden md:grid grid-cols-3 gap-14"
+        >
           {services_data.map((service, index) => (
-            <div
+            <motion.div
               key={index}
-              className={`p-8 py-16 rounded-sm shadow-md transition-all duration-500 text-center cursor-pointer hover:bg-neonGreen group bg-white text-black`}
+              variants={itemVariants}
+              className="p-8 py-16 rounded-sm shadow-md transition-all duration-500 text-center cursor-pointer hover:bg-neonGreen group bg-white text-black"
             >
               <div className="flex justify-center mb-4">
                 <div className="relative w-16 h-16">
@@ -47,16 +56,16 @@ export default function ServiceCards() {
                     src={service.iconSrc || '/placeholder.svg'}
                     alt={service.title}
                     fill
-                    className={`object-contain group-hover:filter group-hover:brightness-0 group-hover:invert`}
+                    className="object-contain group-hover:filter group-hover:brightness-0 group-hover:invert"
                     priority
                   />
                 </div>
               </div>
               <h3 className="text-xl group-hover:text-white font-semibold mb-3">{service.title}</h3>
               <p className="group-hover:text-white text-neutral-600">{service.description}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Mobile Horizontal Scroll */}
         <div
@@ -115,7 +124,7 @@ export default function ServiceCards() {
         </div>
       </div>
       <div className="my-8 flex justify-center">
-        <ButtonGreen text="See All Services" to="/services" hover={false} />
+        <ButtonGreen text="See All Services" to="/services" hover={true} />
       </div>
     </section>
   )
