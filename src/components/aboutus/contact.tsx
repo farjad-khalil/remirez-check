@@ -1,4 +1,4 @@
-"use client"
+'use client'
 import React from 'react'
 import { motion } from 'framer-motion'
 import { ButtonGreenBright, ButtonWhite } from '../Button/button'
@@ -41,17 +41,11 @@ export default function Contact() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
       >
-        <motion.h2
-          className="text-4xl max-sm:text-2xl font-bold mb-4"
-          variants={itemVariants}
-        >
+        <motion.h2 className="text-4xl max-sm:text-2xl font-bold mb-4" variants={itemVariants}>
           Elevate Your <span className="text-BrightGreen">Green Space!</span>
         </motion.h2>
 
-        <motion.p
-          className="max-w-2xl mx-auto mb-8 font-semibold"
-          variants={itemVariants}
-        >
+        <motion.p className="max-w-2xl mx-auto mb-8 font-semibold" variants={itemVariants}>
           {contactus_data}
         </motion.p>
 

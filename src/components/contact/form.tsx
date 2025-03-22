@@ -4,6 +4,20 @@ import Image from 'next/image'
 import { useState } from 'react'
 import Snackbar from '@mui/material/Snackbar'
 import Alert from '@mui/material/Alert'
+import { motion } from 'framer-motion'
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.15,
+      duration: 0.5,
+      ease: 'easeOut',
+    },
+  }),
+}
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -80,11 +94,17 @@ const ContactForm = () => {
   return (
     <section className="relative flex flex-col md:flex-row items-center justify-center bg-offWhite min-h-screen p-10 md:px-24 max-sm:p-4 gap-6">
       {/* Left - Form Section */}
-      <div className="relative h-[650px] max-sm:h-auto bg-neonGreen p-10 max-sm:p-4 w-full md:w-1/2 text-white px-8 md:px-20 overflow-hidden flex flex-col">
+      <motion.div
+        initial={{ opacity: 0, x: -80 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.7, ease: 'easeOut' }}
+        viewport={{ once: true, amount: 0.4 }}
+        className="relative h-[650px] max-sm:h-auto bg-neonGreen p-10 max-sm:p-4 w-full md:w-1/2 text-white px-8 md:px-20 overflow-hidden flex flex-col"
+      >
         {/* Leaves Image Positioned at Bottom Right */}
-        <div className="absolute bottom-0 -right-20 w-[450px]  ">
+        <div className="absolute bottom-0 -right-20 w-[450px]">
           <Image
-            src="/assets/contact/leaves.png" // Replace with actual path
+            src="/assets/contact/leaves.png"
             alt="Decorative Leaves"
             width={550}
             height={550}
@@ -93,70 +113,102 @@ const ContactForm = () => {
           />
         </div>
 
-        <h2 className="md:text-3xl text-xl font-bold mb-4  ">Want a Free Estimate?</h2>
-        <p className="mb-6 text-center md:text-left">
+        <motion.h2
+          className="md:text-3xl text-xl font-bold mb-4"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+          custom={0}
+        >
+          Want a Free Estimate?
+        </motion.h2>
+
+        <motion.p
+          className="mb-6 text-center md:text-left"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+          custom={1}
+        >
           We&apos;re here to bring your outdoor vision to life! Whether you need landscape design,
           tree trimming, sod installation, or seasonal cleanup, our expert team is ready to assist.
-        </p>
+        </motion.p>
 
         <form onSubmit={handleSubmit} className="space-y-4 relative z-10 w-full">
-          <input
-            type="text"
-            placeholder="Full Name"
-            name="fullName"
-            value={formData.fullName}
-            onChange={handleChange}
-            className="w-full p-3 px-6 border border-gray-300 placeholder:text-black rounded-sm text-black focus:outline-none"
-          />
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="Email Address"
-            className="w-full p-3 px-6 border border-gray-300 placeholder:text-black rounded-sm text-black focus:outline-none"
-          />
-          <input
-            type="tel"
-            placeholder="Phone Number"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            className="w-full p-3 px-6 border border-gray-300 placeholder:text-black rounded-sm text-black focus:outline-none"
-          />
-          <textarea
-            placeholder="Enter Message"
-            className="w-full p-3 px-6 border border-gray-300 placeholder:text-black rounded-sm text-black focus:outline-none"
-            rows={4}
+          {['fullName', 'email', 'phone'].map((field, i) => (
+            <motion.input
+              key={field}
+              type={field === 'email' ? 'email' : field === 'phone' ? 'tel' : 'text'}
+              name={field}
+              value={formData[field as keyof typeof formData]}
+              onChange={handleChange}
+              placeholder={
+                field === 'fullName'
+                  ? 'Full Name'
+                  : field === 'email'
+                  ? 'Email Address'
+                  : 'Phone Number'
+              }
+              className="w-full p-3 px-6 border border-gray-300 placeholder:text-black rounded-sm text-black focus:outline-none"
+              variants={fadeUp}
+              custom={i + 2}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            />
+          ))}
+
+          <motion.textarea
             name="message"
             value={formData.message}
             onChange={handleChange}
-          ></textarea>
+            placeholder="Enter Message"
+            rows={4}
+            className="w-full p-3 px-6 border border-gray-300 placeholder:text-black rounded-sm text-black focus:outline-none"
+            variants={fadeUp}
+            custom={5}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          ></motion.textarea>
 
-          {/* Submit Button */}
-          <div className="py-2 flex justify-end">
-            {/* <ButtonLight text="Contact Us" /> */}
+          <motion.div
+            className="py-2 flex justify-end"
+            variants={fadeUp}
+            custom={6}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             <button
               type="submit"
               className="bg-white text-neonGreen px-8 py-3 font-medium border-2 border-neonGreen transition-all duration-300 hover:bg-neonGreen hover:text-white hover:border-white"
             >
               {loading ? 'Sending...' : 'Contact us'}
             </button>
-          </div>
+          </motion.div>
         </form>
-      </div>
+      </motion.div>
 
-      {/* Right - Image Section (Hidden on small screens, centered on large) */}
-      <div className="w-full   h-[650px] md:w-1/2 flex justify-center md:justify-end max-md:hidden">
+      {/* Right - Image Section */}
+      <motion.div
+        className="w-full h-[650px] md:w-1/2 flex justify-center md:justify-end max-md:hidden"
+        initial={{ opacity: 0, x: 100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.7, ease: 'easeOut' }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <Image
-          src="/assets/contact/form.png" // Replace with actual path
+          src="/assets/contact/form.png"
           alt="Person Working"
           width={650}
           height={550}
           className="object-cover max-w-full"
           priority
         />
-      </div>
+      </motion.div>
 
       {/* Snackbar */}
       <Snackbar
