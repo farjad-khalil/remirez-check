@@ -248,7 +248,7 @@ export const testimonialsData = [
         designation: "Homeowner",
     },
 ];
-
+export const contactus_data = "Transform your garden and lawn into a vibrant, well-maintained haven. From expert landscaping to seasonal enhancements, we bring beauty and care to every corner of your outdoor environment."
 
 
 

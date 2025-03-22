@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import  { ButtonGreen, ButtonGreenBright, ButtonLight, ButtonWhite } from '../Button/button'
+import { contactus_data } from '@/constants/constants'
 
 export default function Contact() {
     return (
@@ -13,13 +14,12 @@ export default function Contact() {
                     backgroundPosition: "center bottom",
                 }}
             ></div>
-            <div className="container mx-auto px-4 max-md:px-16  relative z-10 text-center">
-                <h2 className="text-4xl font-bold mb-4">
+            <div className="container mx-auto px-4 max-md:px-7  relative z-10 text-center">
+                <h2 className="text-4xl max-sm:text-2xl font-bold mb-4">
                     Elevate Your <span className="text-[#94f312]">Green Space!</span>
                 </h2>
-                <p className="max-w-2xl mx-auto mb-8">
-                    Transform your garden and lawn into a vibrant, well-maintained haven. From expert landscaping to seasonal
-                    enhancements, we bring beauty and care to every corner of your outdoor environment.
+                <p className="max-w-2xl mx-auto mb-8 font-semibold">
+                    {contactus_data}
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4 items-center">
                     <ButtonWhite text={"Contact Us"} to="/contact" />
