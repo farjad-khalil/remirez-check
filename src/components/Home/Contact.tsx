@@ -39,6 +39,13 @@ export default function ContactForm() {
     type: 'general',
     services: [],
   })
+  type FieldName = 'fullName' | 'email' | 'phone'
+
+  const fields: { name: FieldName; type: string; placeholder: string }[] = [
+    { name: 'fullName', type: 'text', placeholder: 'Full Name' },
+    { name: 'email', type: 'email', placeholder: 'Email Address' },
+    { name: 'phone', type: 'tel', placeholder: 'Phone Number' },
+  ]
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [success, setSuccess] = useState('')
@@ -134,27 +141,19 @@ export default function ContactForm() {
             </motion.h2>
 
             {/* Description */}
-            <motion.p
-              className="text-gray-600 mb-6"
-              variants={fadeInUp}
-              custom={1}
-            >
+            <motion.p className="text-gray-600 mb-6" variants={fadeInUp} custom={1}>
               {contact_data.desc}
             </motion.p>
 
             {/* Form */}
             <form onSubmit={handleSubmit} className="space-y-4">
-              {[
-                { name: 'fullName', type: 'text', placeholder: 'Full Name' },
-                { name: 'email', type: 'email', placeholder: 'Email Address' },
-                { name: 'phone', type: 'tel', placeholder: 'Phone Number' },
-              ].map((field, i) => (
+              {fields.map((field, i) => (
                 <motion.div key={field.name} variants={fadeInUp} custom={i + 2}>
                   <Input
                     type={field.type}
                     name={field.name}
                     placeholder={field.placeholder}
-                    value={formData[field.name as keyof typeof formData]}
+                    value={formData[field.name]}
                     onChange={handleChange}
                   />
                 </motion.div>
@@ -171,11 +170,7 @@ export default function ContactForm() {
                 />
               </motion.div>
 
-              <motion.div
-                className="flex justify-end"
-                variants={fadeInUp}
-                custom={6}
-              >
+              <motion.div className="flex justify-end" variants={fadeInUp} custom={6}>
                 <button
                   type="submit"
                   className="bg-neonGreen text-white px-8 py-3 font-medium border-2 border-white transition-all duration-300 hover:bg-transparent hover:text-neonGreen hover:border-neonGreen"
@@ -188,20 +183,12 @@ export default function ContactForm() {
 
             {/* Success/Error messages */}
             {success && (
-              <motion.p
-                className="text-green-600 mt-4"
-                variants={fadeInUp}
-                custom={7}
-              >
+              <motion.p className="text-green-600 mt-4" variants={fadeInUp} custom={7}>
                 {success}
               </motion.p>
             )}
             {error && (
-              <motion.p
-                className="text-red-600 mt-4"
-                variants={fadeInUp}
-                custom={8}
-              >
+              <motion.p className="text-red-600 mt-4" variants={fadeInUp} custom={8}>
                 {error}
               </motion.p>
             )}

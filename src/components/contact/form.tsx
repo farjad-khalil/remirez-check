@@ -148,8 +148,8 @@ const ContactForm = () => {
                 field === 'fullName'
                   ? 'Full Name'
                   : field === 'email'
-                  ? 'Email Address'
-                  : 'Phone Number'
+                    ? 'Email Address'
+                    : 'Phone Number'
               }
               className="w-full p-3 px-6 border border-gray-300 placeholder:text-black rounded-sm text-black focus:outline-none"
               variants={fadeUp}

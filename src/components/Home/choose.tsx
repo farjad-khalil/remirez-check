@@ -117,33 +117,18 @@ export default function ChooseUs() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
           >
-            <motion.div
-              className="text-2xl font-bold mb-2"
-              variants={fadeInUp}
-              custom={0}
-            >
+            <motion.div className="text-2xl font-bold mb-2" variants={fadeInUp} custom={0}>
               {choose_data.h1}
             </motion.div>
 
-            <motion.div
-              className="mb-6"
-              variants={fadeInUp}
-              custom={1}
-            >
+            <motion.div className="mb-6" variants={fadeInUp} custom={1}>
               {choose_data.desc}
             </motion.div>
 
             <Accordion type="single" collapsible defaultValue="item-0">
               {accordion_data.map((item, index) => (
-                <motion.div
-                  key={index}
-                  variants={fadeInUp}
-                  custom={index + 2}
-                >
-                  <AccordionItem
-                    value={`item-${index}`}
-                    className="border-t border-white/20 py-1"
-                  >
+                <motion.div key={index} variants={fadeInUp} custom={index + 2}>
+                  <AccordionItem value={`item-${index}`} className="border-t border-white/20 py-1">
                     <AccordionTrigger className="bg-white text-black text-left p-4 font-medium hover:no-underline">
                       {item.title}
                     </AccordionTrigger>

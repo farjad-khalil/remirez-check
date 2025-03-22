@@ -46,7 +46,7 @@ export default function Hero({
       />
 
       {/* Overlay Text */}
-      <div className="absolute md:px-44  inset-0 flex items-center justify-center text-white font-bold bg-black bg-opacity-10 text-center">
+      <div className="absolute md:px-44 max-md:px-20 max-sm:px-0  inset-0 flex items-center justify-center text-white font-bold bg-black bg-opacity-10 text-center">
         <div>
           <h1 className="text-4xl max-sm:text-2xl md:text-7xl font-bold mb-6 px-10">
             <motion.div
