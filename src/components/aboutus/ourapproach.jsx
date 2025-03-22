@@ -23,9 +23,9 @@ export default function OurApproach() {
 
                             <div className="space-y-4 max-md:pt-10 flex flex-col">
                                 {[
-                                    { icon: "/assets/aboutus/frame.svg", text: "Customer-Centric Service" },
-                                    { icon: "/assets/aboutus/frame-1.svg", text: "Commitment to Excellence" },
-                                    { icon: "/assets/aboutus/frame-2.svg", text: "Long-Term Trust & Care" },
+                                    { icon: "/assets/aboutus/Frame.svg", text: "Customer-Centric Service" },
+                                    { icon: "/assets/aboutus/Frame-1.svg", text: "Commitment to Excellence" },
+                                    { icon: "/assets/aboutus/Frame-2.svg", text: "Long-Term Trust & Care" },
                                 ].map((item, index) => (
                                     <div
                                         key={index}
