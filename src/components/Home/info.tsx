@@ -6,7 +6,7 @@ import { ButtonGreen } from '../Button/button'
 export default function Info() {
     return (
         <div>
-            <section className="bg-white pb-10 mx-8 md:mx-14">
+            <section className="bg-white pb-10 mx-8 max-sm:mx-5 md:mx-14">
                 <div className=" ">
                     <div className="grid md:grid-cols-12 ">
                         <div className='col-span-7'>

@@ -4,7 +4,7 @@ export const hero_data_aboutus = {
     t1: "About",
     t2: "Us",
     description: (
-        <p className="md:text-2xl md:mx-44 text-lg mx-10">
+        <p className="md:text-2xl max-sm:text-base md:mx-44 text-lg mx-8">
             What sets us apart? Our commitment to <span className="text-[#94f312]">excellence, attention to detail,</span> and{" "}
             <span className="text-[#94f312]">customer satisfaction.</span> We treat every{" "}
             <span className="text-[#94f312]">lawn and garden</span> as if it were our own, ensuring the highest level
@@ -20,7 +20,7 @@ export const hero_data_services: any = {
     t1: "Our",
     t2: "Services",
     description: (
-        <p className="md:text-2xl md:mx-44 text-lg mx-10">
+        <p className="md:text-2xl max-sm:text-base md:mx-44 text-lg mx-8">
             Our services are designed to enhance and maintain the beauty of your outdoor space with expert care. From <span className="text-[#94f312]">landscape design and tree trimming,</span>{" "}
             to sod installation and seasonal cleanup, we ensure your lawn and garden stay vibrant 
             <span className="text-[#94f312]"> year-round.</span>{" "} With attention to detail and a passion for greenery, we bring your outdoor vision to life!
@@ -34,7 +34,7 @@ export const hero_data_gallery: any = {
     t1: "Our",
     t2: "Gallery",
     description: (
-        <p className="md:text-2xl md:mx-44 text-lg mx-10">
+        <p className="md:text-2xl max-sm:text-base md:mx-44 text-lg mx-8">
             Browse through our <span className="text-[#94f312]">gallery, </span>{" "}to see stunning examples of our 
             <span className="text-[#94f312]"> landscape transformations.</span> From vibrant gardens to manicured lawns and flawless{" "}
             <span className="text-[#94f312]">sod installations,</span> our work reflects our dedication and expert craftsmanship. Each project is a testament to our passion for creating beautiful outdoor spaces. Let these images inspire your next{" "}
@@ -47,7 +47,7 @@ export const hero_data_contactus: any = {
     t1: "Contact",
     t2: "Us",
     description: (
-        <p className="md:text-2xl md:mx-44 text-lg mx-10">
+        <p className="md:text-2xl max-sm:text-base md:mx-44 text-lg mx-8">
             We’re here to help! Whether you need <span className="text-[#94f312]">expert landscaping services, </span>{" "}have
             <span className="text-[#94f312]">questions about our offerings,</span> or want a {" "}
             <span className="text-[#94f312]">free quote, </span>don’t hesitate to reach out. Our friendly team is ready to assist you with all your lawn and garden needs, ensuring your outdoor space stays beautiful and well-maintained.{" "}
@@ -61,7 +61,7 @@ export const hero_data_home: any = {
     t1: "Serving Garden City & Nassau County for Over ",
     t2: "20 Years!",
     description: (
-        <p className="md:text-2xl md:mx-44 text-lg mx-10">
+        <p className="md:text-2xl max-sm:text-lg md:mx-44 text-lg mx-8">
             With <span className="text-[#94f312]">years of expertise, </span>,{" "}we provide high-quality
             <span className="text-[#94f312]"> landscaping and gardening, </span> services tailored to your needs, ensuring a lush, vibrant environment all year round.
 
@@ -73,7 +73,7 @@ export const hero_data_error: any = {
     t1: "Oops! ",
     t2: "Page Not Found",
     description: (
-        <p className="md:text-2xl md:mx-44 text-lg mx-10">
+        <p className="md:text-2xl max-sm:text-base md:mx-44 text-lg mx-8">
                 It looks like the page you were looking for doesn’t exist or may have been moved. <span className="text-[#94f312]">Don’t worry, </span>{" "}we’re here to help you find what you need!
         </p>
     ),

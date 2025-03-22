@@ -11,12 +11,8 @@ export default function OurApproach() {
 
                     <DividerCenter t1={"Our"} t2={"Approach"} />
 
-
-
-
-
-                    <div className="grid md:grid-cols-12 gap-8 mt-8 p-5 px-16">
-                        <div className="bg-white p-6 rounded-sm shadow-sm flex md:flex-row flex-col justify-around max-md:items-center md:col-span-7 border border-solid border-primary ">
+                    <div className="grid lg:grid-cols-12 gap-8 mt-8 p-5 px-16 max-sm:px-4">
+                        <div className="bg-white p-6 rounded-sm shadow-sm flex lg:flex-row  flex-col justify-around max-lg:items-center md:col-span-7 border border-solid border-primary ">
                             <Image
                                 src="/assets/aboutus/our_team.png"
                                 alt="Team Members"
@@ -25,40 +21,31 @@ export default function OurApproach() {
                                 priority
                             />
 
-                            <div className="space-y-6 max-md:pt-10 flex flex-col justify-between">
-                                <div className="flex items-center justify-evenly gap-3 bg-lightGray py-4 px-10 rounded">
-                                    <span className="inline-block  rounded-full"><Image
-                                        src="/assets/aboutus/frame.svg"
-                                        alt="Team Members"
-                                        width={50}
-                                        height={50}
-                                        priority
-                                    /> </span>
-                                    <span className="font-bold">Customer-Centric Service</span>
-                                </div>
-
-                                <div className="flex items-center justify-evenly gap-3 bg-lightGray py-4 px-10 rounded">
-                                    <span className="inline-block  rounded-full"><Image
-                                        src="/assets/aboutus/frame-1.svg"
-                                        alt="Team Members"
-                                        width={50}
-                                        height={50}
-                                        priority
-                                    /> </span>
-                                    <span className="font-bold">Commitment to Excellence</span>
-                                </div>
-
-                                <div className="flex items-center justify-evenly gap-3 bg-lightGray py-4 px-10 rounded">
-                                    <span className="inline-block  rounded-full"><Image
-                                        src="/assets/aboutus/frame-2.svg"
-                                        alt="Team Members"
-                                        width={50}
-                                        height={50}
-                                        priority
-                                    /> </span>
-                                    <span className="font-bold">Long-Term Trust & Care</span>
-                                </div>
+                            <div className="space-y-4 max-md:pt-10 flex flex-col">
+                                {[
+                                    { icon: "/assets/aboutus/frame.svg", text: "Customer-Centric Service" },
+                                    { icon: "/assets/aboutus/frame-1.svg", text: "Commitment to Excellence" },
+                                    { icon: "/assets/aboutus/frame-2.svg", text: "Long-Term Trust & Care" },
+                                ].map((item, index) => (
+                                    <div
+                                        key={index}
+                                        className="flex items-center gap-4 bg-lightGray py-3 px-6 max-sm:px-4 rounded"
+                                    >
+                                        <Image
+                                            src={item.icon}
+                                            alt="Icon"
+                                            width={40}
+                                            height={40}
+                                            className="min-w-[40px] min-h-[40px]"
+                                            priority
+                                        />
+                                        <span className="font-bold text-black max-sm:text-sm leading-snug">
+                                            {item.text}
+                                        </span>
+                                    </div>
+                                ))}
                             </div>
+
                         </div>
 
                         <div className="bg-[#65991d] p-8 text-white md:col-span-5 flex items-center">

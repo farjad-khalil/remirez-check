@@ -65,9 +65,9 @@ const ContactForm = () => {
     }
     
     return (
-        <section className="relative flex flex-col md:flex-row items-center justify-center bg-[#f5f8f1] min-h-screen px-8 md:px-24 p-10 gap-6">
+        <section className="relative flex flex-col md:flex-row items-center justify-center bg-[#f5f8f1] min-h-screen p-10 md:px-24 max-sm:p-4 gap-6">
             {/* Left - Form Section */}
-            <div className="relative h-[650px] bg-[#65991d] p-10 w-full md:w-1/2 text-white px-8 md:px-20 overflow-hidden flex flex-col">
+            <div className="relative h-[650px] max-sm:h-auto bg-[#65991d] p-10 max-sm:p-4 w-full md:w-1/2 text-white px-8 md:px-20 overflow-hidden flex flex-col">
                 {/* Leaves Image Positioned at Bottom Right */}
                 <div className="absolute bottom-0 -right-20 w-[450px]  ">
                     <Image
@@ -111,7 +111,7 @@ const ContactForm = () => {
                         name="phone" 
                         value={formData.phone} 
                         onChange={handleChange}
-                        className="w-full p-3 border border-gray-300 placeholder:text-black rounded-sm text-black focus:outline-none"
+                        className="w-full p-3 px-6 border border-gray-300 placeholder:text-black rounded-sm text-black focus:outline-none"
                     />
                     <textarea
                         placeholder="Enter Message"

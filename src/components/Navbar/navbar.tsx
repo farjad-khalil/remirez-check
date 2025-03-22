@@ -10,7 +10,7 @@ export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <header className="px-8 md:px-16 py-5 flex justify-between items-center bg-[#65991d]">
+        <header className="px-8 md:px-16 py-5 max-sm:px-2 flex justify-between items-center bg-[#65991d]">
             {/* Left - Logo */}
             <div className="flex items-center">
                 <Image

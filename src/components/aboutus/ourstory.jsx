@@ -4,10 +4,10 @@ import { our_story_text } from '@/constants/constants'
 export default function OurStory() {
     return (
         <div>
-            <section className="bg-white py-12">
+            <section className="bg-white py-12 ">
                 <div className=" ">
                     <div className="grid md:grid-cols-2 ">
-                        <div className="bg-[#65991d] p-8 text-white py-20  md:px-16 px-10">
+                            <div className="bg-[#65991d] p-8 text-white py-20 px-10 max-sm:py-9 max-sm:px-5  md:px-16 ">
                             <h2 className="md:text-8xl text-2xl font-bold mb-6">Our Story</h2>
 
 

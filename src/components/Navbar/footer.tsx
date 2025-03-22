@@ -142,7 +142,7 @@ export default function Footer() {
       </div>
 
       {/* Copyright Bar */}
-      <div className="text-center text-xl font-light bg-neonGreen p-2">COPYRIGHT M.RAMIREZ LANDSCAPING, INC.</div>
+      <div className="text-center text-xl max-md:text-xs font-light bg-neonGreen p-2 max-md:px-0">COPYRIGHT M.RAMIREZ LANDSCAPING, INC.</div>
     </footer>
   )
 }

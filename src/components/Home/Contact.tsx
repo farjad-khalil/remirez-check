@@ -68,7 +68,7 @@ export default function ContactForm() {
 
     return (
         <section className="py-16 px-4">
-            <div className="max-w-5xl mx-auto bg-neutral-50 border-4 border-neutral-200 rounded-md shadow-sm overflow-visible relative">
+            <div className="max-w-5xl mx-auto bg-neutral-50 border-4 border-neutral-200 rounded-md shadow-sm overflow-visible max-sm:overflow-hidden relative">
                 {/* Background leaves - positioned to match design */}
 
                 <div className="grid md:grid-cols-2 items-center">

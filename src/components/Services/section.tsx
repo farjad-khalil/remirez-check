@@ -5,11 +5,11 @@ import Image from 'next/image'
 export default function Section({ index, title, h1, h2, h3, desc_1, desc_2, desc_3, img, icon }: any) {
 
   return (
-    <section className='p-14 bg-lightGreen mb-24'>
+    <section className='p-14 max-md:p-10 max-sm:p-6 bg-lightGreen mb-24'>
 
       <div className="flex flex-col md:flex-row items-center justify-center ">
         {/* Left Image Section (Shows first on larger screens, second on mobile) */}
-        <div className={`relative w-full md:w-5/12 mt-6 md:mt-0 order-2 ${index % 2 == 0 ? "md:order-1" : "md:order-2"} `}>
+        <div className={`relative w-full md:w-5/12 mt-14 max-md:p-3 max-md:pl-14 md:mt-0 order-2 ${index % 2 == 0 ? "md:order-1" : "md:order-2"} `}>
           {/* Border Container */}
           <div className="border-4 border-[#65991d] relative">
             {/* Image with Offset */}
@@ -69,9 +69,9 @@ export default function Section({ index, title, h1, h2, h3, desc_1, desc_2, desc
           </div>
         </div>
         <div className="flex p-10 max-md:justify-center order-3 md:hidden">
-              {index % 2 == 0 ? <ButtonGreen text={"Book Service"} /> : <ButtonLight text={"Book Service"} />}
+          {index % 2 == 0 ? <ButtonGreen text={"Book Service"} /> : <ButtonLight text={"Book Service"} />}
 
-            </div>
+        </div>
       </div>
 
     </section>

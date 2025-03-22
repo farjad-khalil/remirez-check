@@ -6,6 +6,7 @@ import { Quote } from "lucide-react";
 import { DividerLeft } from "../Divider/divider";
 
 const Testimonial = () => {
+    // ✅ Set initial state based on `window.innerWidth`
     const [startIndex, setStartIndex] = useState(0);
     const [visibleCards, setVisibleCards] = useState(3);
 
@@ -20,29 +21,35 @@ const Testimonial = () => {
             setStartIndex(startIndex - 1);
         }
     };
+
     useEffect(() => {
         const updateVisibleCards = () => {
-            if (window.innerWidth < 768) {
-                setVisibleCards(1); // Show 1 card on screens < md (768px)
-            } else {
-                setVisibleCards(3); // Default to 3 cards on larger screens
-            }
-        };
+          if (window.innerWidth < 768) {
+            setVisibleCards(1);
+          }
+          else if (window.innerWidth < 1200) {
+            setVisibleCards(2);
+          }
+           else {
+            setVisibleCards(3);
+          }
+        }
+      
+        updateVisibleCards();
+        window.addEventListener("resize", updateVisibleCards);
+        return () => window.removeEventListener("resize", updateVisibleCards);
+      }, []);
+      
 
-        updateVisibleCards(); // Initial check
-        window.addEventListener("resize", updateVisibleCards); // Listen for resize
-
-        return () => window.removeEventListener("resize", updateVisibleCards); // Cleanup
-    }, []);
     return (
-        <div className="p-10 flex flex-col items-center">
+        <div className="p-10 max-sm:px-4 flex flex-col items-center">
             <DividerLeft t1={"What"} t2={"Our Customer Say"} />
             {/* Testimonial Cards */}
             <div className="flex justify-center gap-6 overflow-hidden cursor-pointer">
                 {testimonialsData.slice(startIndex, startIndex + visibleCards).map((testimonial, index) => (
                     <div
                         key={index}
-                        className={`p-6 relative w-[450px] rounded-lg shadow-lg transition-all duration-300 bg-[#f5f5f5] hover:bg-neonGreen group`}
+                        className={`p-6 max-sm:p-3 relative w-[450px] max-md:w-full rounded-lg shadow-lg transition-all duration-300 bg-[#f5f5f5] hover:bg-neonGreen group`}
                     >
                         <div className="flex flex-col items-center mb-4">
                             {/* Profile Image */}
@@ -74,7 +81,7 @@ const Testimonial = () => {
                         </p>
 
                         {/* Review Text */}
-                        <p className="text-lg text-center text-gray-700 group-hover:text-white mb-4">
+                        <p className="text-lg max-sm:text-sm text-center text-gray-700 group-hover:text-white mb-4">
                             {testimonial.review}
                         </p>
 
@@ -83,7 +90,9 @@ const Testimonial = () => {
                             <p className="text-center text-lg font-bold text-black group-hover:text-white">
                                 {testimonial.designation}
                             </p>
-                            <div className="text-8xl text-neonGreen  group-hover:text-white"><Quote fill='#65991d' /></div>
+                            <div className="text-8xl text-neonGreen group-hover:text-white">
+                                <Quote fill='#65991d' />
+                            </div>
                         </div>
                     </div>
                 ))}
