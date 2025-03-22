@@ -1,4 +1,3 @@
-
 // Hero section data
 type HeroData = {
   t1: string
