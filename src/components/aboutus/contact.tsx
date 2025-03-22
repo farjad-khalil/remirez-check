@@ -15,7 +15,7 @@ export default function Contact() {
       ></div>
       <div className="container mx-auto px-4 max-md:px-7  relative z-10 text-center">
         <h2 className="text-4xl max-sm:text-2xl font-bold mb-4">
-          Elevate Your <span className="text-[#94f312]">Green Space!</span>
+          Elevate Your <span className="text-BrightGreen">Green Space!</span>
         </h2>
         <p className="max-w-2xl mx-auto mb-8 font-semibold">{contactus_data}</p>
         <div className="flex flex-col sm:flex-row justify-center gap-4 items-center">

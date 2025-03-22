@@ -34,7 +34,7 @@ export default function Section({
           className={`relative w-full md:w-5/12 mt-14 max-md:p-3 max-md:pl-14 md:mt-0 order-2 ${index % 2 == 0 ? 'md:order-1' : 'md:order-2'} `}
         >
           {/* Border Container */}
-          <div className="border-4 border-[#65991d] relative">
+          <div className="border-4 border-neonGreen relative">
             {/* Image with Offset */}
             <Image
               src={img} // Replace with actual image path
@@ -52,7 +52,7 @@ export default function Section({
           className={`w-full md:w-1/2  md:px-16 order-1 ${index % 2 == 0 ? 'md:order-2' : 'md:order-1'} `}
         >
           {/* Title */}
-          <h2 className="text-2xl md:text-3xl font-bold text-[#65991d] flex items-center gap-3">
+          <h2 className="text-2xl md:text-3xl font-bold text-neonGreen flex items-center gap-3">
             <Image
               src={icon} // Replace with actual icon path
               alt="Icon"

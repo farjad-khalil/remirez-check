@@ -48,7 +48,7 @@ export default function Hero({
       <div className="absolute md:px-44  inset-0 flex items-center justify-center text-white font-bold bg-black bg-opacity-10 text-center">
         <div>
           <h1 className="text-4xl max-sm:text-2xl md:text-7xl font-bold mb-6 px-10">
-            {t1} <span className="text-[#94f312]">{t2}</span>
+            {t1} <span className="text-BrightGreen">{t2}</span>
           </h1>
           <h1>{description}</h1>
           {buttons ? (

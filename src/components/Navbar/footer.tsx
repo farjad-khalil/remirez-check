@@ -12,7 +12,7 @@ export default function Footer() {
   const [contactOpen, setContactOpen] = useState(false)
 
   return (
-    <footer className="bg-[#535355] text-white pt-12">
+    <footer className="bg-darkGray text-white pt-12">
       <div className="container mx-auto px-4">
         {/* Desktop Layout */}
         <div className="hidden md:grid md:grid-cols-3 gap-8 mb-8 md:px-52">

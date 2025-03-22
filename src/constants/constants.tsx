@@ -11,11 +11,11 @@ export const hero_data_aboutus: HeroData = {
   description: (
     <p className="md:text-2xl max-sm:text-base md:mx-44 text-lg mx-8">
       What sets us apart? Our commitment to{' '}
-      <span className="text-[#94f312]">excellence, attention to detail,</span> and{' '}
-      <span className="text-[#94f312]">customer satisfaction.</span> We treat every{' '}
-      <span className="text-[#94f312]">lawn and garden</span> as if it were our own, ensuring the
+      <span className="text-BrightGreen">excellence, attention to detail,</span> and{' '}
+      <span className="text-BrightGreen">customer satisfaction.</span> We treat every{' '}
+      <span className="text-BrightGreen">lawn and garden</span> as if it were our own, ensuring the
       highest level of care and professionalism. Whether you&rsquo;re looking to{' '}
-      <span className="text-[#94f312]">refresh your outdoor space</span> or need ongoing
+      <span className="text-BrightGreen">refresh your outdoor space</span> or need ongoing
       maintenance, our team is here to bring your vision to life.
     </p>
   ),
@@ -28,9 +28,9 @@ export const hero_data_services: HeroData = {
   description: (
     <p className="md:text-2xl max-sm:text-base md:mx-44 text-lg mx-8">
       Our services are designed to enhance and maintain the beauty of your outdoor space with expert
-      care. From <span className="text-[#94f312]">landscape design and tree trimming,</span> to sod
+      care. From <span className="text-BrightGreen">landscape design and tree trimming,</span> to sod
       installation and seasonal cleanup, we ensure your lawn and garden stay vibrant
-      <span className="text-[#94f312]"> year-round.</span> With attention to detail and a passion
+      <span className="text-BrightGreen"> year-round.</span> With attention to detail and a passion
       for greenery, we bring your outdoor vision to life!
     </p>
   ),
@@ -42,13 +42,13 @@ export const hero_data_gallery: HeroData = {
   t2: 'Gallery',
   description: (
     <p className="md:text-2xl max-sm:text-base md:mx-44 text-lg mx-8">
-      Browse through our <span className="text-[#94f312]">gallery, </span> to see stunning examples
+      Browse through our <span className="text-BrightGreen">gallery, </span> to see stunning examples
       of our
-      <span className="text-[#94f312]"> landscape transformations.</span> From vibrant gardens to
-      manicured lawns and flawless <span className="text-[#94f312]">sod installations,</span> our
+      <span className="text-BrightGreen"> landscape transformations.</span> From vibrant gardens to
+      manicured lawns and flawless <span className="text-BrightGreen">sod installations,</span> our
       work reflects our dedication and expert craftsmanship. Each project is a testament to our
       passion for creating beautiful outdoor spaces. Let these images inspire your next{' '}
-      <span className="text-[#94f312]">landscaping project.</span> Your perfect landscape is waiting
+      <span className="text-BrightGreen">landscaping project.</span> Your perfect landscape is waiting
       to be brought to life!
     </p>
   ),
@@ -60,11 +60,11 @@ export const hero_data_contactus: HeroData = {
   description: (
     <p className="md:text-2xl max-sm:text-base md:mx-44 text-lg mx-8">
       We’re here to help! Whether you need{' '}
-      <span className="text-[#94f312]">expert landscaping services, </span> have
-      <span className="text-[#94f312]">questions about our offerings,</span> or want a{' '}
-      <span className="text-[#94f312]">free quote, </span>don’t hesitate to reach out. Our friendly
+      <span className="text-BrightGreen">expert landscaping services, </span> have
+      <span className="text-BrightGreen">questions about our offerings,</span> or want a{' '}
+      <span className="text-BrightGreen">free quote, </span>don’t hesitate to reach out. Our friendly
       team is ready to assist you with all your lawn and garden needs, ensuring your outdoor space
-      stays beautiful and well-maintained. <span className="text-[#94f312]">Contact us today!</span>
+      stays beautiful and well-maintained. <span className="text-BrightGreen">Contact us today!</span>
     </p>
   ),
   src: '/assets/contact/hero.png',
@@ -74,8 +74,8 @@ export const hero_data_home: HeroData = {
   t2: '20 Years!',
   description: (
     <p className="md:text-2xl max-sm:text-lg md:mx-44 text-lg mx-8">
-      With <span className="text-[#94f312]">years of expertise, </span>, we provide high-quality
-      <span className="text-[#94f312]"> landscaping and gardening, </span> services tailored to your
+      With <span className="text-BrightGreen">years of expertise, </span>, we provide high-quality
+      <span className="text-BrightGreen"> landscaping and gardening, </span> services tailored to your
       needs, ensuring a lush, vibrant environment all year round.
     </p>
   ),
@@ -87,7 +87,7 @@ export const hero_data_error: HeroData = {
   description: (
     <p className="md:text-2xl max-sm:text-base md:mx-44 text-lg mx-8">
       It looks like the page you were looking for doesn’t exist or may have been moved.{' '}
-      <span className="text-[#94f312]">Don’t worry, </span> we’re here to help you find what you
+      <span className="text-BrightGreen">Don’t worry, </span> we’re here to help you find what you
       need!
     </p>
   ),

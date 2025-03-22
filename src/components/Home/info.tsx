@@ -19,7 +19,7 @@ export default function Info() {
                 priority
               />
             </div>
-            <div className="bg-[#65991d] text-white py-4 px-4 md:py-10 md:px-10 col-span-5 ">
+            <div className="bg-neonGreen text-white py-4 px-4 md:py-10 md:px-10 col-span-5 ">
               <div className="mb-4">
                 <div className="">
                   <span className="md:text-4xl text-2xl font-bold text-white mb-4">

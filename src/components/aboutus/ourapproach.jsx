@@ -45,7 +45,7 @@ export default function OurApproach() {
               </div>
             </div>
 
-            <div className="bg-[#65991d] p-8 text-white md:col-span-5 flex items-center">
+            <div className="bg-neonGreen p-8 text-white md:col-span-5 flex items-center">
               <h3 className="mb-4 text-2xl montserrat-light ">
                 The <span className="font-bold">testimonies</span> of our customers are our largest
                 asset. From the beginning we&apos;ve been so very grateful to all our loyal

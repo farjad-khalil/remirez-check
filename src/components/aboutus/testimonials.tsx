@@ -46,7 +46,7 @@ const Testimonial = () => {
         {testimonialsData.slice(startIndex, startIndex + visibleCards).map((testimonial, index) => (
           <div
             key={index}
-            className={`p-6 max-sm:p-3 relative w-[450px] max-md:w-full rounded-lg shadow-lg transition-all duration-300 bg-[#f5f5f5] hover:bg-neonGreen group`}
+            className={`p-6 max-sm:p-3 relative w-[450px] max-md:w-full rounded-lg shadow-lg transition-all duration-300 bg-offWhite hover:bg-neonGreen group`}
           >
             <div className="flex flex-col items-center mb-4">
               {/* Profile Image */}
@@ -65,7 +65,7 @@ const Testimonial = () => {
                 {testimonial.name}
               </h4>
               {/* Stars */}
-              <div className="flex text-[#f1ac18] text-2xl">
+              <div className="flex text-yellow text-2xl">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <span key={i}>★</span>
                 ))}

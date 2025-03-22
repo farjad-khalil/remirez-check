@@ -10,7 +10,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <header className="px-8 md:px-16 py-5 max-sm:px-2 flex justify-between items-center bg-[#65991d]">
+    <header className="px-8 md:px-16 py-5 max-sm:px-2 flex justify-between items-center bg-neonGreen">
       {/* Left - Logo */}
       <div className="flex items-center">
         <Image
@@ -79,7 +79,7 @@ export default function Navbar() {
       ></div>
 
       <div
-        className={`fixed inset-0 bg-[#65991d] text-white flex flex-col items-center justify-center space-y-8 text-2xl font-bold z-50 transform transition-transform duration-500 ease-in-out ${
+        className={`fixed inset-0 bg-neonGreen text-white flex flex-col items-center justify-center space-y-8 text-2xl font-bold z-50 transform transition-transform duration-500 ease-in-out ${
           menuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >

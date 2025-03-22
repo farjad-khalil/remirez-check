@@ -20,9 +20,10 @@ module.exports = {
         gray: '#DDDDDD',
         softWhite: '#F8F8F5',
         darkGray: '#535355',
-        offWhite: '#F9F9F9',
+        offWhite: '#f5f5f5',
         lightGreen: '#F7FBF4',
         BrightGreen: '#94F312',
+        yellow:'#f1ac18',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {

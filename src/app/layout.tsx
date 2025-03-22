@@ -27,7 +27,7 @@ export default function RootLayout({
               />
             </Link>
           </div>
-          <div className="text-[#65991d] flex flex-row gap-4 max-sm:gap-0 text-2xl items-center ">
+          <div className="text-neonGreen flex flex-row gap-4 max-sm:gap-0 text-2xl items-center ">
             <span className="mr-2  max-sm:text-sm">Call Us </span>
             <Image
               src="/assets/home/phone.png"
@@ -36,14 +36,14 @@ export default function RootLayout({
               height={16}
               className="max-sm:w-4 h-auto"
             />
-            <Link href="tel:(516) 270-7024" className="text-[#65991d] font-medium max-sm:text-sm">
+            <Link href="tel:(516) 270-7024" className="text-neonGreen font-medium max-sm:text-sm">
               (516) 270-7024
             </Link>
           </div>
         </div>
 
         {/* Navigation */}
-        <header className="bg-[#65991d] text-white ">
+        <header className="bg-neonGreen text-white ">
           <Navbar />
         </header>
         {children}
