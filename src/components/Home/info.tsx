@@ -37,7 +37,7 @@ export default function Info() {
 
                     <br />
                   </span>
-                  
+
                   <span className="md:text-lg  text-sm montserrat-light  text-white ">
                     <motion.div
                       initial={{ opacity: 0, y: 40 }}
@@ -47,13 +47,11 @@ export default function Info() {
                     >
                       {home_info.description}
                     </motion.div>
-                    
                   </span>
                   <div className="mt-10 max-md:flex max-md:justify-center">
                     <ButtonGreen text="Read More" hover={false} />
                   </div>
                 </div>
-                
               </div>
             </div>
           </div>

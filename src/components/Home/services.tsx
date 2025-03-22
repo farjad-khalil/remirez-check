@@ -6,7 +6,6 @@ import { services_data } from '@/constants/constants'
 import { ButtonGreen } from '../Button/button'
 import { containerVariants, itemVariants } from '@/constants/constants'
 
-
 export default function ServiceCards() {
   const [mobileActiveIndex, setMobileActiveIndex] = useState(2) // Start at 3rd card (index 2)
   const scrollContainerRef = useRef<HTMLDivElement>(null)

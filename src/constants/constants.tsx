@@ -1,4 +1,3 @@
-import { animate } from "framer-motion"
 
 // Hero section data
 type HeroData = {
@@ -30,8 +29,8 @@ export const hero_data_services: HeroData = {
   description: (
     <p className="md:text-2xl max-sm:text-base md:mx-4 text-lg mx-8">
       Our services are designed to enhance and maintain the beauty of your outdoor space with expert
-      care. From <span className="text-BrightGreen">landscape design and tree trimming,</span> to sod
-      installation and seasonal cleanup, we ensure your lawn and garden stay vibrant
+      care. From <span className="text-BrightGreen">landscape design and tree trimming,</span> to
+      sod installation and seasonal cleanup, we ensure your lawn and garden stay vibrant
       <span className="text-BrightGreen"> year-round.</span> With attention to detail and a passion
       for greenery, we bring your outdoor vision to life!
     </p>
@@ -44,14 +43,14 @@ export const hero_data_gallery: HeroData = {
   t2: 'Gallery',
   description: (
     <p className="md:text-2xl max-sm:text-base md:mx-4 text-lg mx-8">
-      Browse through our <span className="text-BrightGreen">gallery, </span> to see stunning examples
-      of our
+      Browse through our <span className="text-BrightGreen">gallery, </span> to see stunning
+      examples of our
       <span className="text-BrightGreen"> landscape transformations.</span> From vibrant gardens to
       manicured lawns and flawless <span className="text-BrightGreen">sod installations,</span> our
       work reflects our dedication and expert craftsmanship. Each project is a testament to our
       passion for creating beautiful outdoor spaces. Let these images inspire your next{' '}
-      <span className="text-BrightGreen">landscaping project.</span> Your perfect landscape is waiting
-      to be brought to life!
+      <span className="text-BrightGreen">landscaping project.</span> Your perfect landscape is
+      waiting to be brought to life!
     </p>
   ),
   src: '/assets/gallery/hero.png',
@@ -64,9 +63,10 @@ export const hero_data_contactus: HeroData = {
       We’re here to help! Whether you need{' '}
       <span className="text-BrightGreen">expert landscaping services, </span> have
       <span className="text-BrightGreen">questions about our offerings,</span> or want a{' '}
-      <span className="text-BrightGreen">free quote, </span>don’t hesitate to reach out. Our friendly
-      team is ready to assist you with all your lawn and garden needs, ensuring your outdoor space
-      stays beautiful and well-maintained. <span className="text-BrightGreen">Contact us today!</span>
+      <span className="text-BrightGreen">free quote, </span>don’t hesitate to reach out. Our
+      friendly team is ready to assist you with all your lawn and garden needs, ensuring your
+      outdoor space stays beautiful and well-maintained.{' '}
+      <span className="text-BrightGreen">Contact us today!</span>
     </p>
   ),
   src: '/assets/contact/hero.png',
@@ -77,8 +77,8 @@ export const hero_data_home: HeroData = {
   description: (
     <p className="md:text-2xl max-sm:text-lg md:mx-4 text-lg mx-8">
       With <span className="text-BrightGreen">years of expertise, </span>, we provide high-quality
-      <span className="text-BrightGreen"> landscaping and gardening, </span> services tailored to your
-      needs, ensuring a lush, vibrant environment all year round.
+      <span className="text-BrightGreen"> landscaping and gardening, </span> services tailored to
+      your needs, ensuring a lush, vibrant environment all year round.
     </p>
   ),
   src: '/assets/home/hero.png',
@@ -211,7 +211,6 @@ export const choose_data = {
   h1: 'At Ramirez Landscaping',
   desc: 'we take pride in delivering top-quality landscaping services tailored to your needs. Our expert team ensures your outdoor space remains lush, vibrant, and well-maintained throughout the year.',
 }
-
 
 // About US Page
 export const our_story_text = {
@@ -372,10 +371,6 @@ export const footer_contact = {
   location: 'D block, H Road Nassur',
 }
 
-
-
-
-
 // Animations
 export const containerVariants = {
   hidden: {},
@@ -392,7 +387,6 @@ export const itemVariants = {
     opacity: 1,
     y: 0,
     transition: { duration: 0.5, ease: 'easeOut' },
-
   },
 }
 

@@ -24,8 +24,7 @@ export function DividerCenter({ t1, t2 }: { t1: string; t2: string }) {
         viewport={{ once: true }}
         className="px-4 md:text-6xl text-3xl font-semibold"
       >
-        <span className="text-black">{t1}</span>{' '}
-        <span className="text-neonGreen">{t2}</span>
+        <span className="text-black">{t1}</span> <span className="text-neonGreen">{t2}</span>
       </motion.h2>
       <motion.div
         initial={{ scaleX: 0 }}

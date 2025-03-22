@@ -1,4 +1,4 @@
-"use client"
+'use client'
 import Hero from '@/components/HeroSection/hero'
 import React from 'react'
 import { galleryImages, hero_data_gallery } from '@/constants/constants'

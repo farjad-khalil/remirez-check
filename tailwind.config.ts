@@ -23,7 +23,7 @@ module.exports = {
         offWhite: '#f5f5f5',
         lightGreen: '#F7FBF4',
         BrightGreen: '#94F312',
-        yellow:'#f1ac18',
+        yellow: '#f1ac18',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
