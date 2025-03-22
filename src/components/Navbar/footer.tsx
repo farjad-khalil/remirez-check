@@ -1,11 +1,11 @@
-"use client"
+'use client'
 
-import { Facebook, Globe, Instagram, Mail, MapPin, Phone, Plus } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
-import { useState } from "react"
-import { footer_text, footer_contact } from "@/constants/constants"
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
+import { Facebook, Globe, Instagram, Mail, MapPin, Phone, Plus } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { useState } from 'react'
+import { footer_text, footer_contact } from '@/constants/constants'
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
 
 export default function Footer() {
   const [servicesOpen, setServicesOpen] = useState(false)
@@ -18,7 +18,14 @@ export default function Footer() {
         <div className="hidden md:grid md:grid-cols-3 gap-8 mb-8 md:px-52">
           <div>
             <div className="flex items-center mb-4">
-              <Image src="/assets/main_logo.svg" alt="M. Ramirez Logo" width={300} height={300} className="mr-2" priority />
+              <Image
+                src="/assets/main_logo.svg"
+                alt="M. Ramirez Logo"
+                width={300}
+                height={300}
+                className="mr-2"
+                priority
+              />
             </div>
             <p className="text-sm mb-4">{footer_text}</p>
           </div>
@@ -71,18 +78,30 @@ export default function Footer() {
           {/* Logo and About */}
           <div className="text-center mb-6">
             <div className="flex justify-center mb-4">
-              <Image src="/assets/main_logo.svg" alt="M. Ramirez Logo" width={300} height={300} priority />
+              <Image
+                src="/assets/main_logo.svg"
+                alt="M. Ramirez Logo"
+                width={300}
+                height={300}
+                priority
+              />
             </div>
             <p className="text-sm mb-6 pb-6 border-b border-gray-600">{footer_text}</p>
           </div>
 
           {/* Collapsible Services Section */}
-          <Collapsible open={servicesOpen} onOpenChange={setServicesOpen} className="border-b border-gray-600 py-4">
+          <Collapsible
+            open={servicesOpen}
+            onOpenChange={setServicesOpen}
+            className="border-b border-gray-600 py-4"
+          >
             <div className="flex items-center justify-between">
               <h3 className="font-bold text-xl">Our Services</h3>
               <CollapsibleTrigger asChild>
                 <button className="p-1">
-                  <Plus className={`h-6 w-6 text-white transition-transform ${servicesOpen ? "rotate-45" : ""}`} />
+                  <Plus
+                    className={`h-6 w-6 text-white transition-transform ${servicesOpen ? 'rotate-45' : ''}`}
+                  />
                 </button>
               </CollapsibleTrigger>
             </div>
@@ -98,12 +117,18 @@ export default function Footer() {
           </Collapsible>
 
           {/* Collapsible Contact Section */}
-          <Collapsible open={contactOpen} onOpenChange={setContactOpen} className="border-b border-gray-600 py-4">
+          <Collapsible
+            open={contactOpen}
+            onOpenChange={setContactOpen}
+            className="border-b border-gray-600 py-4"
+          >
             <div className="flex items-center justify-between">
               <h3 className="font-bold text-xl">Contact Us</h3>
               <CollapsibleTrigger asChild>
                 <button className="p-1">
-                  <Plus className={`h-6 w-6 text-white transition-transform ${contactOpen ? "rotate-45" : ""}`} />
+                  <Plus
+                    className={`h-6 w-6 text-white transition-transform ${contactOpen ? 'rotate-45' : ''}`}
+                  />
                 </button>
               </CollapsibleTrigger>
             </div>
@@ -142,8 +167,9 @@ export default function Footer() {
       </div>
 
       {/* Copyright Bar */}
-      <div className="text-center text-xl max-md:text-xs font-light bg-neonGreen p-2 max-md:px-0">COPYRIGHT M.RAMIREZ LANDSCAPING, INC.</div>
+      <div className="text-center text-xl max-md:text-xs font-light bg-neonGreen p-2 max-md:px-0">
+        COPYRIGHT M.RAMIREZ LANDSCAPING, INC.
+      </div>
     </footer>
   )
 }
-

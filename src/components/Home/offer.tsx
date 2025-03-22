@@ -1,8 +1,6 @@
-import Image from "next/image"
-import { offer_data, services_heading } from "@/constants/constants"
+import Image from 'next/image'
+import { offer_data, services_heading } from '@/constants/constants'
 export default function Offer() {
-  
-
   return (
     <section className=" mx-14 pb-10 max-sm:mx-5">
       <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -12,9 +10,7 @@ export default function Offer() {
             <h2 className="md:text-4xl text-2xl max-sm:text-base  font-bold text-neutral-600 mb-8 leading-tight">
               {services_heading.h1}
             </h2>
-            <p className="text-2xl max-sm:text-base  text-neonGreen">
-              {services_heading.desc}
-            </p>
+            <p className="text-2xl max-sm:text-base  text-neonGreen">{services_heading.desc}</p>
           </div>
 
           <div className="flex justify-center md:justify-start">
@@ -35,7 +31,7 @@ export default function Offer() {
             <div key={index} className="bg-neutral-100 overflow-hidden rounded-sm pb-2 ">
               <div className="h-56 overflow-hidden">
                 <Image
-                  src={service.image || "/placeholder.svg"}
+                  src={service.image || '/placeholder.svg'}
                   alt={service.title}
                   width={400}
                   height={300}
@@ -44,8 +40,10 @@ export default function Offer() {
                 />
               </div>
               <div className="p-4 max-sm:py-2 ">
-                <h3 className="text-xl max-md:text-2xl  font-bold text-neonGreen mb-2 max-sm:mb-0">{service.title}</h3>
-                <br/>
+                <h3 className="text-xl max-md:text-2xl  font-bold text-neonGreen mb-2 max-sm:mb-0">
+                  {service.title}
+                </h3>
+                <br />
                 <p className="text-gray-700 max-md:text-lg font-medium">{service.description}</p>
               </div>
             </div>
@@ -55,4 +53,3 @@ export default function Offer() {
     </section>
   )
 }
-
