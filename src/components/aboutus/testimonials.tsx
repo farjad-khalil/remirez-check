@@ -1,4 +1,5 @@
 'use client'
+
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { testimonialsData } from '@/constants/constants'
@@ -8,7 +9,9 @@ import { DividerLeft } from '../Divider/divider'
 const Testimonial = () => {
   const [startIndex, setStartIndex] = useState(0)
   const [visibleCards, setVisibleCards] = useState(3)
-  const [cardWidth, setCardWidth] = useState(460) // default for desktop
+  const [cardWidth, setCardWidth] = useState(460)
+
+  const GAP = 24 // Tailwind's gap-6 = 24px
 
   const nextTestimonials = () => {
     if (startIndex + visibleCards < testimonialsData.length) {
@@ -28,11 +31,13 @@ const Testimonial = () => {
 
       if (screenWidth < 768) {
         setVisibleCards(1)
-        setCardWidth(screenWidth - 48) // 24px padding each side
+        setCardWidth(screenWidth - 48) // 24px padding on each side
       } else if (screenWidth < 1200) {
+        setStartIndex(0)
         setVisibleCards(2)
         setCardWidth(400)
       } else {
+        setStartIndex(0)
         setVisibleCards(3)
         setCardWidth(460)
       }
@@ -43,18 +48,20 @@ const Testimonial = () => {
     return () => window.removeEventListener('resize', updateVisibleCards)
   }, [])
 
+  const totalWidth = testimonialsData.length * cardWidth + (testimonialsData.length - 1) * GAP
+
   return (
     <div className="p-10 max-sm:px-4 flex flex-col items-center">
+      {/* Heading */}
       <DividerLeft t1={'What'} t2={'Our Customer Say'} />
 
-      {/* Outer Wrapper */}
+      {/* Outer Slider Container */}
       <div className="relative w-full overflow-hidden">
-        {/* Sliding Inner Wrapper */}
         <div
           className="flex gap-6 transition-transform duration-500 ease-in-out"
           style={{
-            transform: `translateX(-${startIndex * cardWidth}px)`,
-            width: `${testimonialsData.length * cardWidth}px`,
+            transform: `translateX(-${startIndex * (cardWidth + GAP)}px)`,
+            width: `${totalWidth}px`,
           }}
         >
           {testimonialsData.map((testimonial, index) => (
@@ -63,6 +70,7 @@ const Testimonial = () => {
               style={{ width: `${cardWidth}px`, flexShrink: 0 }}
               className="p-6 max-sm:p-3 rounded-lg shadow-lg transition-all duration-300 bg-offWhite hover:bg-neonGreen group"
             >
+              {/* Avatar */}
               <div className="flex flex-col items-center mb-4">
                 <div className="w-28 h-28 rounded-full overflow-hidden mb-2 border-2 border-white">
                   <Image
@@ -74,6 +82,8 @@ const Testimonial = () => {
                     priority
                   />
                 </div>
+
+                {/* Name + Rating */}
                 <h4 className="font-bold text-2xl text-black group-hover:text-white">
                   {testimonial.name}
                 </h4>
@@ -84,14 +94,17 @@ const Testimonial = () => {
                 </div>
               </div>
 
+              {/* Title */}
               <p className="text-center font-bold text-neonGreen group-hover:text-white mb-2">
                 {testimonial.title}
               </p>
 
+              {/* Review */}
               <p className="text-lg max-sm:text-sm text-center text-gray-700 group-hover:text-white mb-4">
                 {testimonial.review}
               </p>
 
+              {/* Footer */}
               <div className="flex mt-10 justify-between items-start">
                 <p className="text-center text-lg font-bold text-black group-hover:text-white">
                   {testimonial.designation}
