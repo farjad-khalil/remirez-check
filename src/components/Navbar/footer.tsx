@@ -16,7 +16,7 @@ export default function Footer() {
     <footer className="bg-darkGray text-white pt-12">
       <div className="container mx-auto px-4">
         {/* Desktop Layout */}
-        <div className="hidden md:grid md:grid-cols-3 gap-8 mb-8 md:px-52">
+            <div className="hidden md:grid md:grid-cols-3 gap-8 mb-8 lg:px-52">
           <div>
             <div className="flex items-center mb-4 cursor-pointer" onClick={() => router.push('/')}>
               <Image

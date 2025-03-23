@@ -92,14 +92,14 @@ const ContactForm = () => {
   }
 
   return (
-    <section className="relative flex flex-col md:flex-row items-center justify-center bg-offWhite min-h-screen p-10 md:px-24 max-sm:p-4 gap-6">
+    <section className="relative flex flex-col md:flex-row items-center justify-center bg-offWhite min-h-screen p-10 custom-1170:px-24 px-10 max-sm:p-4 gap-6">
       {/* Left - Form Section */}
       <motion.div
         initial={{ opacity: 0, x: -80 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.7, ease: 'easeOut' }}
         viewport={{ once: true, amount: 0.4 }}
-        className="relative h-[650px] max-sm:h-auto bg-neonGreen p-10 max-sm:p-4 w-full md:w-1/2 text-white px-8 md:px-20 overflow-hidden flex flex-col"
+        className="relative  h-[650px]   max-sm:h-auto bg-neonGreen p-10 max-sm:p-4 w-full md:w-1/2 text-white px-6 xl:px-20 lg:px-14  overflow-hidden flex flex-col"
       >
         {/* Leaves Image Positioned at Bottom Right */}
         <div className="absolute bottom-0 -right-20 w-[450px]">
