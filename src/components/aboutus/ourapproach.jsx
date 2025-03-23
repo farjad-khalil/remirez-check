@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import React from 'react'
 import Image from 'next/image'
 import { DividerCenter } from '../Divider/divider'
+import { our_approach } from '@/constants/constants'
 
 export default function OurApproach() {
   return (
@@ -36,7 +37,7 @@ export default function OurApproach() {
                       alt="Icon"
                       width={40}
                       height={40}
-                      className="min-w-[40px] min-h-[40px]"
+                      className="min-w-[40px] min-h-[40px] "
                       priority
                     />
                     <span className="font-bold text-black max-sm:text-sm leading-snug">
@@ -55,10 +56,7 @@ export default function OurApproach() {
                   transition={{ duration: 0.6, ease: 'easeOut' }}
                   viewport={{ once: true }}
                 >
-                  The <span className="font-bold">testimonies</span> of our customers are our
-                  largest asset. From the beginning we&apos;ve been so very grateful to all our
-                  loyal customers. Here we promise to continue our legacy by bringing you superb,
-                  outstanding service and care for your home garden and lawn.
+                  {our_approach}
                 </motion.div>
               </h3>
             </div>

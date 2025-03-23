@@ -13,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="flex flex-col min-h-screen montserrat-regular">
+      <body className="flex flex-col min-h-screen montserrat-regular max-w-[1440px] mx-auto">
         <div className="bg-white py-1 px-2 md:px-16  flex justify-between items-center text-sm ">
           <div className="flex">
             <Link href="#" aria-label="Instagram" className="md:hidden ">

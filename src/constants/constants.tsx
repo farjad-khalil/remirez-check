@@ -99,7 +99,7 @@ export const hero_data_error: HeroData = {
 export const home_info = {
   heading: 'At Ramirez Landscaping',
   description: (
-    <div className="font-medium">
+    <div className="font-normal">
       For over <strong className="font-semibold text-black">20</strong> years, we’ve grown solely
       through word of mouth and the heartfelt testimonials of our valued customers. Your trust and
       support have been the foundation of our success, and we couldn’t be more grateful.
@@ -255,8 +255,12 @@ export const testimonialsData = [
     designation: 'Homeowner',
   },
 ]
-export const contactus_data =
-  'Transform your garden and lawn into a vibrant, well-maintained haven. From expert landscaping to seasonal enhancements, we bring beauty and care to every corner of your outdoor environment.'
+export const contactus_data = 'Transform your garden and lawn into a vibrant, well-maintained haven. From expert landscaping to seasonal enhancements, we bring beauty and care to every corner of your outdoor environment.'
+export const our_approach = (<>
+The <span className="font-bold">testimonies</span> of our customers are our
+largest asset. From the beginning we&apos;ve been so very grateful to all our
+loyal customers. Here we promise to continue our legacy by bringing you superb,
+outstanding service and care for your home garden and lawn.</>)
 
 // Services Page
 export const sections = [

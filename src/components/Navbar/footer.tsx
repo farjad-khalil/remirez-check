@@ -6,18 +6,19 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { footer_text, footer_contact } from '@/constants/constants'
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
+import { useRouter } from 'next/navigation'
 
 export default function Footer() {
   const [servicesOpen, setServicesOpen] = useState(false)
   const [contactOpen, setContactOpen] = useState(false)
-
+  const router = useRouter()
   return (
     <footer className="bg-darkGray text-white pt-12">
       <div className="container mx-auto px-4">
         {/* Desktop Layout */}
         <div className="hidden md:grid md:grid-cols-3 gap-8 mb-8 md:px-52">
           <div>
-            <div className="flex items-center mb-4">
+            <div className="flex items-center mb-4 cursor-pointer" onClick={() => router.push("/")}>
               <Image
                 src="/assets/main_logo.svg"
                 alt="M. Ramirez Logo"
