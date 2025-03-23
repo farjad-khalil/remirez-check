@@ -38,7 +38,7 @@ export const ButtonGreenBright = ({ text, to }: { text?: string; to?: string }) 
   return (
     <Link
       href={`${to ? to : '#'}`}
-      className="bg-BrightGreen w-60 py-4 font-bold text-black shadow-lg shadow-black "
+      className="bg-BrightGreen hover:bg-white transition-all duration-200  w-60 py-4 font-bold text-black hover:text-neonGreen shadow-lg shadow-black "
     >
       {text}
     </Link>
@@ -55,7 +55,7 @@ export const ButtonWhite = ({ text, to, onClick }: ButtonWhiteProps) => {
     <Link
       href={to ?? '#'}
       onClick={onClick}
-      className="bg-white w-60 py-4 font-bold text-black shadow-lg shadow-black"
+      className="bg-white hover:bg-neonGreen hover:text-white transition-all duration-200 w-60 py-4 font-bold text-black shadow-lg shadow-black"
     >
       {text}
     </Link>
