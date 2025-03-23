@@ -277,6 +277,7 @@ export const sections = [
       ' From preparing the soil to planting and arranging features, our professionals ensure a seamless installation process. We focus on durability, aesthetics, and long-term plant health for a stunning landscape',
     img: '/assets/services/1.png',
     icon: '/assets/services/11.svg',
+    hoverIcon: '/assets/services/111.svg',
   },
   {
     title: 'Tree, Shrub & Turf Trimming',
@@ -291,6 +292,8 @@ export const sections = [
       'We provide precise edging, mowing, and turf trimming to keep your lawn neat and well-manicured. This enhances curb appeal while ensuring your grass stays in excellent condition.',
     img: '/assets/services/2.png',
     icon: '/assets/services/2.svg',
+    hoverIcon: '/assets/services/22.svg',
+    
   },
   {
     title: 'Sod Lawn Planting',
@@ -305,6 +308,8 @@ export const sections = [
       'Our sod-laying process ensures smooth, even coverage, creating a natural look without visible seams. With proper care, your new lawn will establish strong roots and thrive.',
     img: '/assets/services/3.png',
     icon: '/assets/services/3.svg',
+    hoverIcon: '/assets/services/33.svg',
+
   },
   {
     title: 'Seasonal Garden Enhancement',
@@ -319,6 +324,7 @@ export const sections = [
       'Our enhancements not only make your garden visually appealing but also support plant health, ensuring a well-balanced and flourishing outdoor space.',
     img: '/assets/services/4.png',
     icon: '/assets/services/4.svg',
+    hoverIcon: '/assets/services/44.svg',
   },
   {
     title: 'Fall Leaves Cleanup',
@@ -333,6 +339,7 @@ export const sections = [
       'We responsibly collect and dispose of leaves in an environmentally friendly manner, ensuring sustainability while keeping your yard spotless.',
     img: '/assets/services/5.png',
     icon: '/assets/services/5.svg',
+    hoverIcon: '/assets/services/55.svg',
   },
   {
     title: 'Lawn & Garden Maintenance',
@@ -347,6 +354,7 @@ export const sections = [
       'Our team helps protect your garden from pests and weeds while ensuring your irrigation system provides adequate hydration for optimal plant growth.',
     img: '/assets/services/6.png',
     icon: '/assets/services/6.svg',
+    hoverIcon: '/assets/services/66.svg',
   },
 ]
 

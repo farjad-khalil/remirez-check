@@ -30,6 +30,7 @@ const Services = () => {
             desc_3={sec.desc_3}
             img={sec.img}
             icon={sec.icon}
+            hoverIcon={sec.hoverIcon}
           />
         </div>
       ))}

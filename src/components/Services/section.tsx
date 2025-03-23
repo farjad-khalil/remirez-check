@@ -15,6 +15,7 @@ type SectionProps = {
   desc_3: string
   img: string
   icon: string
+  hoverIcon: string
 }
 
 const fadeInUp = {
@@ -50,12 +51,13 @@ export default function Section({
   desc_3,
   img,
   icon,
+  hoverIcon,
 }: SectionProps) {
   const isEven = index % 2 === 0
 
   return (
-    <section className="p-14 max-md:p-10 max-sm:p-6 bg-lightGreen mb-24 overflow-hidden">
-      <div className="flex flex-col md:flex-row items-center justify-center ">
+    <section className={`p-14  max-lg:px-8 max-lg:pr-5 max-sm:p-6 ${index%2==0 ?"bg-lightGreen": "bg-lightGray2"}  mb-24 overflow-hidden`}>
+      <div className="flex flex-col md:flex-row items-start justify-center gap-4 ">
         {/* Left Image Section */}
         <motion.div
           className={`relative w-full md:w-5/12 mt-14 max-md:p-3 max-md:pl-14 md:mt-0 order-2 ${isEven ? 'md:order-1' : 'md:order-2'}`}
@@ -64,7 +66,7 @@ export default function Section({
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <div className="border-4 border-neonGreen relative">
+          <div className="border-4 border-neonGreen relative top-9 ">
             <Image
               src={img}
               alt="Landscape Design"
@@ -78,18 +80,57 @@ export default function Section({
 
         {/* Right Content Section */}
         <motion.div
-          className={`w-full md:w-1/2 md:px-16 order-1 ${isEven ? 'md:order-2' : 'md:order-1'}`}
+          className={`w-full md:w-1/2 md:px-0 order-1 ${isEven ? 'md:order-2' : 'md:order-1'}`}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
           {/* Title */}
           <motion.h2
-            className="text-2xl md:text-3xl font-bold text-neonGreen flex items-center gap-3"
+            className="text-2xl md:text-3xl font-bold text-neonGreen flex items-center gap-3 "
             variants={fadeInUp}
             custom={0}
           >
-            <Image src={icon} alt="Icon" width={80} height={80} priority />
+            {index % 2 == 0 ? (
+              <div className="group rounded-full hover:bg-neonGreen bg-white p-4 transition-all duration-300">
+                <Image
+                  src={icon}
+                  alt="Icon"
+                  width={60}
+                  height={60}
+                  priority
+                  className="group-hover:hidden "
+                />
+                <Image
+                  src={hoverIcon}
+                  alt="Icon"
+                  width={60}
+                  height={60}
+                  priority
+                  className="hidden group-hover:block"
+                />
+              </div>
+            ) : (
+              <div className="group rounded-full bg-neonGreen hover:bg-white p-4 transition-all duration-300">
+                <Image
+                  src={hoverIcon}
+                  alt="Icon"
+                  width={60}
+                  height={60}
+                  priority
+                  className="group-hover:hidden "
+                />
+                <Image
+                  src={icon}
+                  alt="Icon"
+                  width={60}
+                  height={60}
+                  priority
+                  className="hidden group-hover:block"
+                />
+              </div>
+            )}
+
             {title}
           </motion.h2>
 
@@ -108,14 +149,14 @@ export default function Section({
               >
                 <div className="text-3xl text-neonGreen font-bold">✔</div>
                 <div>
-                  <h3 className="md:text-lg font-bold">{h}</h3>
-                  <p className="text-gray-700">{d}</p>
+                  <h3 className="md:text-lg font-bold">{h} </h3>
+                  <p className="text-neutral-700 text-base ">{d}</p>
                 </div>
               </motion.div>
             ))}
 
             <motion.div
-              className="flex p-10 max-md:justify-center max-md:hidden"
+              className="flex p-10 py-3 max-md:justify-center max-md:hidden"
               variants={fadeInUp}
               custom={4}
             >
