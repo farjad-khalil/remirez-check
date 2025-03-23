@@ -32,9 +32,9 @@ export default function RootLayout({
             <Image
               src="/assets/home/phone.png"
               alt="phone_icon"
-              width={16} // 👈 1rem = 16px (Tailwind's w-4 = 1rem)
-              height={16}
-              className="max-sm:w-4 h-auto"
+              width={24} // 👈 1rem = 16px (Tailwind's w-4 = 1rem)
+              height={24}
+              className="max-sm:w-4  h-auto"
             />
             <Link href="tel:(516) 270-7024" className="text-neonGreen font-medium max-sm:text-sm">
               (516) 270-7024
