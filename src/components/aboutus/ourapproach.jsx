@@ -58,7 +58,7 @@ export default function OurApproach() {
                   {our_approach}
                 </motion.div>
               </h3>
-              </div>
+            </div>
           </div>
         </div>
       </section>

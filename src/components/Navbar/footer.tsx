@@ -16,7 +16,7 @@ export default function Footer() {
     <footer className="bg-darkGray text-white pt-12">
       <div className="container mx-auto px-4">
         {/* Desktop Layout */}
-            <div className="hidden md:grid md:grid-cols-3 gap-8 mb-8 lg:px-52">
+        <div className="hidden md:grid md:grid-cols-3 gap-8 mb-8 custom-1170:px-52 lg:px-32">
           <div>
             <div className="flex items-center mb-4 cursor-pointer" onClick={() => router.push('/')}>
               <Image
@@ -31,14 +31,14 @@ export default function Footer() {
             <p className="text-sm mb-4">{footer_text}</p>
           </div>
 
-          <div>
+          <div onClick={() => router.push('/services')}>
             <h3 className="font-bold mb-4">Our Services</h3>
             <ul className="space-y-2 text-sm cursor-pointer">
-              <li className="hover:text-gray-300">Landscape Design & Installation</li>
-              <li className="hover:text-gray-300">Tree, Shrub & Lawn Planting</li>
-              <li className="hover:text-gray-300">Weekly Lawn Maintenance</li>
-              <li className="hover:text-gray-300">Seasonal Property Maintenance</li>
-              <li className="hover:text-gray-300">Lawn & Garden Fertilization</li>
+              <li className="hover:text-neutral-300">Landscape Design & Installation</li>
+              <li className="hover:text-neutral-300">Tree, Shrub & Lawn Planting</li>
+              <li className="hover:text-neutral-300">Weekly Lawn Maintenance</li>
+              <li className="hover:text-neutral-300">Seasonal Property Maintenance</li>
+              <li className="hover:text-neutral-300">Lawn & Garden Fertilization</li>
             </ul>
           </div>
 
@@ -168,7 +168,7 @@ export default function Footer() {
       </div>
 
       {/* Copyright Bar */}
-      <div className="text-center text-xl max-md:text-xs font-light bg-neonGreen p-2 max-md:px-0">
+      <div className="text-center custom-1170:text-xl md:text-sm max-md:text-xs font-light bg-neonGreen p-2 max-md:px-0">
         COPYRIGHT M.RAMIREZ LANDSCAPING, INC.
       </div>
     </footer>

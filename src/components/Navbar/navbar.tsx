@@ -12,7 +12,7 @@ export default function Navbar() {
   const router = useRouter()
 
   return (
-    <header className="px-8 md:px-16 py-5 max-sm:px-2 flex justify-between items-center bg-neonGreen">
+    <header className="px-8  custom-1170:px-16  py-5 max-sm:px-2 flex justify-between items-center bg-neonGreen">
       {/* Left - Logo */}
       <div className="flex items-center cursor-pointer" onClick={() => router.push('/')}>
         <Image
@@ -26,7 +26,7 @@ export default function Navbar() {
       </div>
 
       {/* Center - Navigation (Visible on `md+`) */}
-      <nav className="hidden md:flex items-center space-x-10 text-xl text-white">
+      <nav className="hidden md:flex items-center custom-1170:space-x-10 space-x-5  text-xl text-white">
         {[
           { name: 'Home', path: '/' },
           { name: 'About Us', path: '/about' },
