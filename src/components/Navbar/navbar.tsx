@@ -4,17 +4,17 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 import { Facebook, Instagram, Menu, X } from 'lucide-react'
-import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation'
 
 export default function Navbar() {
   const pathname = usePathname()
   const [menuOpen, setMenuOpen] = useState(false)
   const router = useRouter()
 
-  return ( 
+  return (
     <header className="px-8 md:px-16 py-5 max-sm:px-2 flex justify-between items-center bg-neonGreen">
       {/* Left - Logo */}
-      <div className="flex items-center cursor-pointer"  onClick={() => router.push("/")}>
+      <div className="flex items-center cursor-pointer" onClick={() => router.push('/')}>
         <Image
           src="/assets/main_logo.svg"
           alt="M. Ramirez Logo"

@@ -255,12 +255,16 @@ export const testimonialsData = [
     designation: 'Homeowner',
   },
 ]
-export const contactus_data = 'Transform your garden and lawn into a vibrant, well-maintained haven. From expert landscaping to seasonal enhancements, we bring beauty and care to every corner of your outdoor environment.'
-export const our_approach = (<>
-The <span className="font-bold">testimonies</span> of our customers are our
-largest asset. From the beginning we&apos;ve been so very grateful to all our
-loyal customers. Here we promise to continue our legacy by bringing you superb,
-outstanding service and care for your home garden and lawn.</>)
+export const contactus_data =
+  'Transform your garden and lawn into a vibrant, well-maintained haven. From expert landscaping to seasonal enhancements, we bring beauty and care to every corner of your outdoor environment.'
+export const our_approach = (
+  <>
+    The <span className="font-bold">testimonies</span> of our customers are our largest asset. From
+    the beginning we&apos;ve been so very grateful to all our loyal customers. Here we promise to
+    continue our legacy by bringing you superb, outstanding service and care for your home garden
+    and lawn.
+  </>
+)
 
 // Services Page
 export const sections = [
@@ -293,7 +297,6 @@ export const sections = [
     img: '/assets/services/2.png',
     icon: '/assets/services/2.svg',
     hoverIcon: '/assets/services/22.svg',
-    
   },
   {
     title: 'Sod Lawn Planting',
@@ -309,7 +312,6 @@ export const sections = [
     img: '/assets/services/3.png',
     icon: '/assets/services/3.svg',
     hoverIcon: '/assets/services/33.svg',
-
   },
   {
     title: 'Seasonal Garden Enhancement',

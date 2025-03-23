@@ -72,13 +72,12 @@ export default function Hero({
           >
             {buttons ? (
               <div className="py-20 flex gap-10 justify-center max-md:flex-col items-center">
-                
-                  <ButtonWhite
-                    text={btn_1}
-                    to={to_1}
-                    onClick={() => scrollToSection('contact-section')}
-                  />
-                
+                <ButtonWhite
+                  text={btn_1}
+                  to={to_1}
+                  onClick={() => scrollToSection('contact-section')}
+                />
+
                 <ButtonGreenBright text={btn_2} to={to_2} />
               </div>
             ) : (

@@ -12,8 +12,8 @@ export default function OurApproach() {
         <div className=" mx-auto ">
           <DividerCenter t1={'Our'} t2={'Approach'} />
 
-          <div className="grid lg:grid-cols-12 gap-8 mt-8 p-5 px-16 max-sm:px-4">
-            <div className="bg-white p-6 rounded-sm shadow-sm flex lg:flex-row  flex-col justify-around max-lg:items-center md:col-span-7 border border-solid border-primary ">
+          <div className="grid  custom-1170:grid-cols-12 gap-8 mt-8 p-5 px-16 max-sm:px-4">
+            <div className="bg-white p-6 rounded-sm shadow-sm flex lg:flex-row  flex-col justify-around max-lg:items-center custom-1170:col-span-7 border border-solid border-primary ">
               <Image
                 src="/assets/aboutus/our_team.png"
                 alt="Team Members"
@@ -22,7 +22,7 @@ export default function OurApproach() {
                 priority
               />
 
-              <div className="space-y-4 max-md:pt-10 flex flex-col justify-between">
+              <div className="space-y-4 max-lg:pt-10 flex flex-col justify-between">
                 {[
                   { icon: '/assets/aboutus/Frame.svg', text: 'Customer-Centric Service' },
                   { icon: '/assets/aboutus/Frame-1.svg', text: 'Commitment to Excellence' },
@@ -30,7 +30,7 @@ export default function OurApproach() {
                 ].map((item, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-4 bg-lightGray py-3 px-6 max-sm:px-4 rounded"
+                    className="flex items-center gap-4 bg-lightGray py-3 px-6  rounded"
                   >
                     <Image
                       src={item.icon}
@@ -47,8 +47,7 @@ export default function OurApproach() {
                 ))}
               </div>
             </div>
-
-            <div className="bg-neonGreen p-8 text-white md:col-span-5 flex items-center">
+            <div className="bg-neonGreen p-8 text-white custom-1170:col-span-5   flex items-center justify-center">
               <h3 className="mb-4 text-2xl montserrat-light ">
                 <motion.div
                   initial={{ opacity: 0, y: 40 }}
@@ -59,7 +58,7 @@ export default function OurApproach() {
                   {our_approach}
                 </motion.div>
               </h3>
-            </div>
+              </div>
           </div>
         </div>
       </section>

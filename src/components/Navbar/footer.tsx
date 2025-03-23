@@ -18,7 +18,7 @@ export default function Footer() {
         {/* Desktop Layout */}
         <div className="hidden md:grid md:grid-cols-3 gap-8 mb-8 md:px-52">
           <div>
-            <div className="flex items-center mb-4 cursor-pointer" onClick={() => router.push("/")}>
+            <div className="flex items-center mb-4 cursor-pointer" onClick={() => router.push('/')}>
               <Image
                 src="/assets/main_logo.svg"
                 alt="M. Ramirez Logo"

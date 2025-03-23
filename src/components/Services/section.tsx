@@ -56,7 +56,9 @@ export default function Section({
   const isEven = index % 2 === 0
 
   return (
-    <section className={`p-14  max-lg:px-8 max-lg:pr-5 max-sm:p-6 ${index%2==0 ?"bg-lightGreen": "bg-lightGray2"}  mb-24 overflow-hidden`}>
+    <section
+      className={`p-14  max-lg:px-8 max-lg:pr-5 max-sm:p-6 ${index % 2 == 0 ? 'bg-lightGreen' : 'bg-lightGray2'}  mb-24 overflow-hidden`}
+    >
       <div className="flex flex-col md:flex-row items-start justify-center gap-4 ">
         {/* Left Image Section */}
         <motion.div
