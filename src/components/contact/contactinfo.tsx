@@ -18,7 +18,7 @@ const ContactInfo = () => {
     <section className="flex flex-col md:flex-row items-center justify-center bg-offWhite p-10 custom-1170:px-24 px-10  max-sm:p-4 gap-6 overflow-hidden">
       {/* Left - Call Us Section */}
       <motion.div
-        className="bg-white shadow-md custom-1170:p-8 px-5 max-sm:p-4 w-full md:h-64 md:w-1/2 flex max-md:flex-col relative justify-center rounded-sm"
+        className="bg-white shadow-md custom-1170:p-8 p-4 px-5 max-sm:p-4 w-full md:h-64 md:w-1/2 flex max-md:flex-col relative justify-center rounded-sm"
         initial="hidden"
         whileInView="visible"
         variants={cardVariant('left')}

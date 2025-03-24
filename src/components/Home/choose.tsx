@@ -25,7 +25,7 @@ const fadeInUp = {
 }
 
 const slideInRight = {
-  hidden: { opacity: 0, x: 100 },
+  hidden: { opacity: 0, x: -100 },
   visible: {
     opacity: 1,
     x: 0,
@@ -154,7 +154,7 @@ export default function ChooseUs() {
                 alt="Landscaper with plants"
                 width={660}
                 height={770}
-                className="h-full object-contain scale-110"
+                className="h-full object-contain scale-110 "
                 priority
               />
             </div>

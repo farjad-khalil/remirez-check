@@ -195,7 +195,7 @@ const ContactForm = () => {
       {/* Right - Image Section */}
       <motion.div
         className="w-full h-[650px] md:w-1/2 flex justify-center md:justify-end max-md:hidden"
-        initial={{ opacity: 0, x: 100 }}
+        initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.7, ease: 'easeOut' }}
         viewport={{ once: true, amount: 0.3 }}

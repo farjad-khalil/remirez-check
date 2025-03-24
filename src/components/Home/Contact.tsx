@@ -112,7 +112,7 @@ export default function ContactForm() {
           {/* Left Image */}
           <motion.div
             className="relative order-2 md:order-1 mt-6 md:mt-0 md:h-full flex items-end justify-center md:justify-start"
-            variants={slideIn('left')}
+            variants={slideIn('right')}
           >
             <div className="relative md:absolute md:-left-4 md:-bottom-8 md:h-[110%]">
               <Image
