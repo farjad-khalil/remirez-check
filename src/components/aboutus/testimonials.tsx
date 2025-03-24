@@ -1,10 +1,10 @@
-"use client"
+'use client'
 
-import { useEffect, useState, useRef } from "react"
-import Image from "next/image"
-import { Quote } from "lucide-react"
-import { testimonialsData } from "@/constants/constants"
-import { DividerLeft } from "../Divider/divider"
+import { useEffect, useState, useRef } from 'react'
+import Image from 'next/image'
+import { Quote } from 'lucide-react'
+import { testimonialsData } from '@/constants/constants'
+import { DividerLeft } from '../Divider/divider'
 
 const Testimonial = () => {
   const [visibleCount, setVisibleCount] = useState(3)
@@ -42,8 +42,8 @@ const Testimonial = () => {
     }
 
     handleResize()
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
   }, [currentIndex])
 
   const maxIndex = Math.max(0, testimonialsData.length - visibleCount)
@@ -63,7 +63,7 @@ const Testimonial = () => {
   return (
     <div className="p-10 px-20 max-sm:px-4 flex flex-col items-center">
       {/* Heading */}
-      <DividerLeft t1={"What"} t2={"Our Customer Say"} />
+      <DividerLeft t1={'What'} t2={'Our Customer Say'} />
 
       {/* Testimonials Slider Container */}
       <div ref={containerRef} className="w-full mt-8 overflow-hidden">
@@ -79,14 +79,14 @@ const Testimonial = () => {
               style={{
                 minWidth: `${cardWidth}px`,
                 maxWidth: `${cardWidth}px`,
-                padding: "0 12px",
+                padding: '0 12px',
               }}
             >
               <div className="p-6 max-sm:p-3 rounded-lg shadow-lg h-full bg-offWhite hover:bg-neonGreen group">
                 <div className="flex flex-col items-center mb-4">
                   <div className="w-28 h-28 rounded-full overflow-hidden mb-2 border-2 border-white">
                     <Image
-                      src={testimonial.image || "/placeholder.svg"}
+                      src={testimonial.image || '/placeholder.svg'}
                       alt={testimonial.name}
                       width={100}
                       height={100}
@@ -94,7 +94,9 @@ const Testimonial = () => {
                       priority
                     />
                   </div>
-                  <h4 className="font-bold text-2xl text-black group-hover:text-white">{testimonial.name}</h4>
+                  <h4 className="font-bold text-2xl text-black group-hover:text-white">
+                    {testimonial.name}
+                  </h4>
                   <div className="flex text-yellow text-2xl">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <span key={i}>★</span>
@@ -102,7 +104,9 @@ const Testimonial = () => {
                   </div>
                 </div>
 
-                <p className="text-center font-bold text-neonGreen group-hover:text-white mb-2">{testimonial.title}</p>
+                <p className="text-center font-bold text-neonGreen group-hover:text-white mb-2">
+                  {testimonial.title}
+                </p>
                 <p className="text-lg max-sm:text-sm text-center text-gray-700 group-hover:text-white mb-4">
                   {testimonial.review}
                 </p>
@@ -143,4 +147,3 @@ const Testimonial = () => {
 }
 
 export default Testimonial
-
