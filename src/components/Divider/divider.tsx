@@ -53,7 +53,7 @@ export function DividerLeft({ t1, t2 }: { t1: string; t2: string }) {
         initial={{ scaleX: 0 }}
         whileInView={{ scaleX: 1 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className="flex-1 h-[2.5px] bg-neonGreen origin-left"
+        className="flex-1 h-[2.5px] mx-4 bg-neonGreen origin-left"
       />
     </motion.div>
   )
