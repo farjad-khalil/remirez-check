@@ -4,7 +4,6 @@ import { useEffect, useState, useRef } from 'react'
 import Image from 'next/image'
 import { Quote } from 'lucide-react'
 import { testimonialsData } from '@/constants/constants'
-import { DividerLeft } from '../Divider/divider'
 
 const Testimonial = () => {
   const [visibleCount, setVisibleCount] = useState(3)
@@ -63,7 +62,6 @@ const Testimonial = () => {
   return (
     <div className="p-10 px-20 max-sm:px-4 flex flex-col items-center">
       {/* Heading */}
-      <DividerLeft t1={'What'} t2={'Our Customer Say'} />
 
       {/* Testimonials Slider Container */}
       <div ref={containerRef} className="w-full mt-8 overflow-hidden">
