@@ -12,7 +12,7 @@ export default function OurApproach() {
         <div className=" mx-auto ">
           <DividerCenter t1={'Our'} t2={'Approach'} />
 
-          <div className="grid  custom-1170:grid-cols-12 gap-8 mt-8 p-5 px-16 max-sm:px-4">
+          <div className="grid  custom-1170:grid-cols-12 gap-8 mt-8 p-5 px-14 max-sm:px-4">
             <div className="bg-white p-6 rounded-sm shadow-sm flex lg:flex-row  flex-col justify-around max-lg:items-center custom-1170:col-span-7 border border-solid border-primary ">
               <Image
                 src="/assets/aboutus/our_team.png"

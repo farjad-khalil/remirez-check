@@ -114,7 +114,7 @@ export default function ContactForm() {
             className="relative order-2 md:order-1 mt-6 md:mt-0 md:h-full flex items-end justify-center md:justify-start"
             variants={slideIn('right')}
           >
-            <div className="relative md:absolute md:-left-4 md:-bottom-8 md:h-[110%]">
+            <div className="relative md:absolute  md:-bottom-11 md:h-[110%]">
               <Image
                 src="/assets/home/person-2.png"
                 alt="Landscaper with plants and tools"

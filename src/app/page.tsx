@@ -35,6 +35,7 @@ export default function Home() {
         <DividerLeft t1="Why" t2="Choose Us" />
         <ChooseUs />
 
+        <DividerLeft t1={'What'} t2={'Our Customer Say'} />
         <Testimonial />
 
         <div id="contact-section">

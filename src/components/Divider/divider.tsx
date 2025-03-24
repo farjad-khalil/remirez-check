@@ -7,7 +7,7 @@ export function DividerCenter({ t1, t2 }: { t1: string; t2: string }) {
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      className="flex items-center w-full bg-white md:pt-12 md:px-8 pt-4 px-4 max-sm:px-5"
+      className="flex items-center w-full bg-white md:pt-12 md:px-14 pt-4 px-4 max-sm:px-5"
     >
       <motion.div
         initial={{ scaleX: 0 }}
@@ -38,7 +38,7 @@ export function DividerLeft({ t1, t2 }: { t1: string; t2: string }) {
       initial={{ opacity: 0, x: -50 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      className="flex items-center w-full bg-white pt-12 px-5 pb-8 md:pb-16 md:px-8 max-sm:px-2"
+      className="flex items-center w-full bg-white pt-12 px-5 pb-8 md:pb-16 md:px-10 max-sm:px-2"
     >
       <motion.h2
         initial={{ opacity: 0 }}

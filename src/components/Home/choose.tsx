@@ -35,7 +35,7 @@ const slideInRight = {
 
 export default function ChooseUs() {
   return (
-    <section className="bg-neonGreen text-white relative overflow-visible">
+    <section className="bg-neonGreen text-white relative overflow-visible ">
       <div className="max-w-7xl mx-auto relative md:pb-5">
         {/* Mobile Layout */}
         <div className="block md:hidden">
@@ -110,7 +110,7 @@ export default function ChooseUs() {
         </div>
 
         {/* Desktop Layout */}
-        <div className="hidden md:flex">
+        <div className="hidden md:flex ">
           <motion.div
             className="w-1/2 p-12"
             initial="hidden"
@@ -148,7 +148,7 @@ export default function ChooseUs() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
           >
-            <div className="absolute right-0 bottom-4 h-[calc(100%+4rem)]">
+            <div className="absolute right-7 bottom-4 h-[calc(100%+4rem)]">
               <Image
                 src="/assets/home/person-1.png"
                 alt="Landscaper with plants"

@@ -5,6 +5,7 @@ import Testimonials from '@/components/aboutus/testimonials'
 import Contact from '@/components/aboutus/contact'
 import Hero from '@/components/HeroSection/hero'
 import { hero_data_aboutus } from '@/constants/constants'
+import { DividerLeft } from '@/components/Divider/divider'
 const AboutUs = () => {
   return (
     <div className="">
@@ -16,6 +17,8 @@ const AboutUs = () => {
       />
       <OurStory />
       <OurApproach />
+
+      <DividerLeft t1={'What'} t2={'Our Customer Say'} />
       <Testimonials />
       <Contact />
     </div>

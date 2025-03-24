@@ -57,7 +57,7 @@ export default function Section({
 
   return (
     <section
-      className={`p-14  max-lg:px-8 max-lg:pr-5 max-sm:p-6 ${index % 2 == 0 ? 'bg-lightGreen' : 'bg-lightGray2'}  mb-24 overflow-hidden`}
+      className={`p-14 px-10  max-lg:px-8 max-lg:pr-5 max-sm:p-6 ${index % 2 == 0 ? 'bg-lightGreen' : 'bg-lightGray2'}  mb-24 overflow-hidden`}
     >
       <div className="flex flex-col md:flex-row items-start justify-center gap-4 ">
         {/* Left Image Section */}
@@ -137,7 +137,7 @@ export default function Section({
           </motion.h2>
 
           {/* Features List */}
-          <div className="mt-6 space-y-6 px-4 md:px-10 md:text-lg">
+          <div className="mt-1 space-y-4 px-4 md:px-10 md:text-lg">
             {[
               { h: h1, d: desc_1 },
               { h: h2, d: desc_2 },
