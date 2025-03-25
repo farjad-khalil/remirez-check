@@ -1,0 +1,101 @@
+[33mcommit d6c2f60bfa1adec4606a9e8dc518b5d8e5f6b7cd[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Farjad <farjadkhalil7@gmail.com>
+Date:   Fri Mar 21 10:47:42 2025 +0500
+
+    Final touches
+
+[33mcommit 2e4fd73b9624e9c58d126b2d39fb34f445c5731a[m
+Author: Farjad <farjadkhalil7@gmail.com>
+Date:   Fri Mar 21 10:42:55 2025 +0500
+
+    Error Page done
+
+[33mcommit fadd7c01b413a7fa6bb6d7001461e0d301431fcb[m
+Author: Farjad <farjadkhalil7@gmail.com>
+Date:   Fri Mar 21 10:14:30 2025 +0500
+
+    Fixed Home Screen
+
+[33mcommit 4db36bb5bcc4fd12b6b76572589f2bd387c8c182[m
+Author: Farjad <farjadkhalil7@gmail.com>
+Date:   Fri Mar 21 09:40:17 2025 +0500
+
+    Home Page: (section) Contact form
+
+[33mcommit 30ed54567c2db4760901a075e5f0008bd663b381[m
+Author: Farjad <farjadkhalil7@gmail.com>
+Date:   Fri Mar 21 08:54:18 2025 +0500
+
+    Home Page: (section) testimonials added
+
+[33mcommit ecffb5b2fd69ea213df38d9e3bdb32e8ca2ba2dc[m
+Author: Farjad <farjadkhalil7@gmail.com>
+Date:   Fri Mar 21 08:52:17 2025 +0500
+
+    Home Page: (section) accordion added
+
+[33mcommit 60236afc9b0ecc348bd6a0873dd659c7f7dbd534[m
+Author: Farjad <farjadkhalil7@gmail.com>
+Date:   Fri Mar 21 08:29:54 2025 +0500
+
+    Home Page: (section)services added
+
+[33mcommit 2df4be1937a206b7c0f4f3eeb5df447c6978eeca[m
+Author: Farjad <farjadkhalil7@gmail.com>
+Date:   Fri Mar 21 06:58:11 2025 +0500
+
+    Home page: section(who we are) added
+
+[33mcommit 64a2502f814e3ff0dfcfdd2cc46d69cf557c79e8[m
+Author: Farjad <farjadkhalil7@gmail.com>
+Date:   Fri Mar 21 06:27:38 2025 +0500
+
+    Home: hero section added
+
+[33mcommit f21abbf4fcd9b79e9ad02ee4fadb64c33fee8876[m
+Author: Farjad <farjadkhalil7@gmail.com>
+Date:   Thu Mar 20 23:10:15 2025 +0500
+
+    Fixed Navbar for mobile
+
+[33mcommit ad358a0162053dab4ff2b52804626d4af8ec2485[m
+Author: Farjad <farjadkhalil7@gmail.com>
+Date:   Thu Mar 20 21:25:21 2025 +0500
+
+    Gallery Page: Done
+
+[33mcommit 964405187420ba4aa24721a61d90dcac18e663bd[m
+Author: Farjad <farjadkhalil7@gmail.com>
+Date:   Thu Mar 20 20:15:54 2025 +0500
+
+    services page: hero_section + sections
+
+[33mcommit 05ce0d2e548e955e7db442f7e505b6b72f5e5a46[m
+Author: Farjad <farjadkhalil7@gmail.com>
+Date:   Thu Mar 20 17:09:15 2025 +0500
+
+    About us done + structured components
+
+[33mcommit d32a552ea7dff05698aed3c42d49aaadac28762c[m
+Author: Farjad <farjadkhalil7@gmail.com>
+Date:   Thu Mar 20 13:30:40 2025 +0500
+
+    about page: testimonials
+
+[33mcommit e48e8006173cef86cf46430f4c9b2b3da129373f[m
+Author: Farjad <farjadkhalil7@gmail.com>
+Date:   Thu Mar 20 05:04:44 2025 +0500
+
+    about us: our story done
+
+[33mcommit 14f6f8eba34e5606bcdf117d3a2105eff19559be[m
+Author: Farjad <farjadkhalil7@gmail.com>
+Date:   Thu Mar 20 03:14:35 2025 +0500
+
+    added navbar+ about us page (half)
+
+[33mcommit b8b7b273580f6a1247bec7af115899331f7607cd[m
+Author: xort-sol <EMDpasword@485066>
+Date:   Wed Mar 19 00:10:06 2025 +0500
+
+    first commit
